@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Perpustakaan Desa, ruang baca dan belajar bersama milik warga."
+    />
+    <title>Beranda | Perpustakaan Desa</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/beranda.css" />
+    <style></style>
+  </head>
+  <body>
+    <aside class="side-menu" id="side-menu" aria-label="Navigasi cepat">
+      <nav class="side-menu__links">
+        <a
+          class="side-menu__link active"
+          href="beranda.html"
+          aria-label="Beranda"
+          ><span class="side-menu__icon">⌂</span
+          ><span class="side-menu__label">Beranda</span></a
+        >
+        <a
+          class="side-menu__link"
+          aria-disabled="true"
+          href="produk.html"
+          aria-label="Katalog buku"
+          ><span class="side-menu__icon">▤</span
+          ><span class="side-menu__label">Katalog Buku</span></a
+        >
+        <a
+          class="side-menu__link"
+          aria-disabled="true"
+          href="auth-login.html"
+          aria-label="Katalog buku"
+          ><span class="side-menu__icon">▤</span
+          ><span class="side-menu__label">Katalog Buku</span></a
+        >
+        <a
+          class="side-menu__link"
+          aria-disabled="true"
+          href="auth-regist.html"
+          aria-label="Katalog buku"
+          ><span class="side-menu__icon">▤</span
+          ><span class="side-menu__label">Katalog Buku</span></a
+        >
+        <a
+          class="side-menu__link"
+          aria-disabled="true"
+          href="form_peminjaman.html"
+          aria-label="Katalog buku"
+          ><span class="side-menu__icon">▤</span
+          ><span class="side-menu__label">Katalog Buku</span></a
+        >
+        <a class="side-menu__link" href="#unggulan" aria-label="Buku pilihan"
+          ><span class="side-menu__icon">◴</span
+          ><span class="side-menu__label">Buku Pilihan</span></a
+        >
+        <a
+          class="side-menu__link"
+          href="#tentang"
+          aria-label="Tentang perpustakaan"
+          ><span class="side-menu__icon">♧</span
+          ><span class="side-menu__label">Tentang Kami</span></a
+        >
+        <a class="side-menu__link" href="#kontak" aria-label="Kontak"
+          ><span class="side-menu__icon">⚙</span
+          ><span class="side-menu__label">Kontak &amp; Informasi</span></a
+        >
+      </nav>
+      <button
+        class="side-menu__toggle"
+        id="side-menu-toggle"
+        type="button"
+        aria-label="Buka sidebar"
+        aria-expanded="false"
+      >
+        <span class="side-menu__icon">≡</span
+        ><span class="side-menu__label">Tutup menu</span>
+      </button>
+    </aside>
+    <div class="topbar">
+      <div class="container">
+        <p>🚚 Perpustakaan untuk seluruh warga desa</p>
+        <div class="utility">
+          <span>✦ Ruang baca, cerita, dan inspirasi</span
+          ><span>☎ (022) 123-4567</span>
+        </div>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="beranda.html"
+          ><span class="logo-mark">♧</span
+          ><span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span></a
+        >
+        <nav class="main-nav" aria-label="Navigasi utama">
+          <a class="active" href="beranda.html">BERANDA</a>
+          <a href="produk.html">KATALOG BUKU</a>
+          <a href="auth-login.html">LOGIN</a>
+          <a href="auth-regist.html">REGIST</a>
+          <a href="form_peminjaman.html">MINJAM</a>
+        </nav>
+        <div class="header-actions">
+          <form class="search-box" role="search">
+            <input
+              type="search"
+              aria-label="Cari buku"
+              placeholder="Cari buku..."
+            /><button type="button" aria-label="Cari" disabled>⌕</button>
+          </form>
+          <a href="#kontak" aria-label="Hubungi kami">♙</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Buka navigasi">
+          ☰
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-copy">
+            <p class="eyebrow">TEMUKAN. BACA. BERTUMBUH.</p>
+            <h1>Ruang baca untuk <em>setiap mimpi.</em></h1>
+            <p>
+              Perpustakaan Desa adalah ruang baca dan belajar bersama milik
+              warga. Gratis untuk anak-anak hingga lansia.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" aria-disabled="true"
+                >JELAJAHI KATALOG&nbsp; →</a
+              ><a class="button button-outline" href="#tentang">TENTANG KAMI</a>
+            </div>
+            <div class="reader-note">
+              <div class="avatars">
+                <span class="avatar">A</span><span class="avatar">R</span
+                ><span class="avatar">D</span><span class="avatar">S</span>
+              </div>
+              <span><strong>★★★★★</strong>Disukai oleh warga desa</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Ilustrasi komunitas pembaca">
+            <div class="hero-badge">Cerita<br />baru untuk<br />semua</div>
+            <div class="book-stack" aria-hidden="true">
+              <span>CERITA NUSANTARA</span><span>ILMU PENGETAHUAN</span
+              ><span>JEJAK LANGKAH</span><span>MASA DEPAN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="benefits" aria-label="Keunggulan perpustakaan">
+        <div class="benefit">
+          <span class="benefit-icon">▣</span
+          ><span
+            ><strong>GRATIS UNTUK WARGA</strong
+            ><small>Terbuka setiap hari kerja</small></span
+          >
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">↺</span
+          ><span
+            ><strong>MUDAH DIPINJAM</strong
+            ><small>Pendaftaran anggota sederhana</small></span
+          >
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">♢</span
+          ><span
+            ><strong>KOLEKSI TERPILIH</strong
+            ><small>Buku untuk semua usia</small></span
+          >
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">♡</span
+          ><span
+            ><strong>RUANG YANG NYAMAN</strong
+            ><small>Belajar dan bertemu bersama</small></span
+          >
+        </div>
+      </section>
+      <div class="container content">
+        <section id="kategori">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">PILIH SESUAI MINATMU</p>
+              <h2>Temukan Bacaan Berikutnya</h2>
+            </div>
+            <a class="view-all" href="katalog.html"
+              >LIHAT SEMUA KATEGORI&nbsp; →</a
+            >
+          </div>
+          <div class="category-grid">
+            <a class="category" href="katalog.html"
+              ><i class="round-icon">▤</i
+              ><span>FIKSI<small>Cerita yang menghibur</small></span></a
+            ><a class="category" href="katalog.html"
+              ><i class="round-icon">◉</i
+              ><span>NON-FIKSI<small>Wawasan baru setiap hari</small></span></a
+            ><a class="category" href="katalog.html"
+              ><i class="round-icon">✦</i
+              ><span>PENDIDIKAN<small>Belajar lebih mudah</small></span></a
+            ><a class="category" href="katalog.html"
+              ><i class="round-icon">♡</i
+              ><span>ANAK-ANAK<small>Teman tumbuh si kecil</small></span></a
+            ><a class="category" href="katalog.html"
+              ><i class="round-icon">☼</i
+              ><span>KETERAMPILAN<small>Kreasi dan inspirasi</small></span></a
+            ><a class="category" href="katalog.html"
+              ><i class="round-icon">⌂</i
+              ><span>SEJARAH<small>Merawat cerita bangsa</small></span></a
+            >
+          </div>
+        </section>
+        <section class="books-section" id="unggulan">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">BUKU PILIHAN BULAN INI</p>
+              <h2>Favorit Pembaca</h2>
+            </div>
+            <a class="view-all" aria-disabled="true">LIHAT KATALOG&nbsp; →</a>
+          </div>
+          <div class="book-grid">
+            <article class="book-card">
+              <a href="detail_produk.html" class="book-cover">
+                <img
+                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
+                  alt="Sampul Informatika untuk SMA Kelas XII"
+                />
+              </a>
+              <div class="book-meta">
+                <h3>Informatika Untuk SMA Kelas XII</h3>
+                <p>Pri Ario Damar, Naning Widayati</p>
+                <span class="stars">★★★★★</span>
+                <div class="book-bottom">
+                  <strong>Rp45.000</strong
+                  ><a class="detail-link" aria-disabled="true"
+                    >LIHAT DETAIL →</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="book-card">
+              <div class="book-cover">
+                <img
+                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
+                  alt="Sampul Informatika untuk SMA Kelas XII"
+                />
+              </div>
+              <div class="book-meta">
+                <h3>Informatika Untuk SMA Kelas XII</h3>
+                <p>Pri Ario Damar, Naning Widayati</p>
+                <span class="stars">★★★★★</span>
+                <div class="book-bottom">
+                  <strong>Rp45.000</strong
+                  ><a class="detail-link" aria-disabled="true"
+                    >LIHAT DETAIL →</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="book-card">
+              <div class="book-cover">
+                <img
+                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
+                  alt="Sampul Informatika untuk SMA Kelas XII"
+                />
+              </div>
+              <div class="book-meta">
+                <h3>Informatika Untuk SMA Kelas XII</h3>
+                <p>Pri Ario Damar, Naning Widayati</p>
+                <span class="stars">★★★★★</span>
+                <div class="book-bottom">
+                  <strong>Rp45.000</strong
+                  ><a class="detail-link" aria-disabled="true"
+                    >LIHAT DETAIL →</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="book-card">
+              <div class="book-cover">
+                <img
+                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
+                  alt="Sampul Informatika untuk SMA Kelas XII"
+                />
+              </div>
+              <div class="book-meta">
+                <h3>Informatika Untuk SMA Kelas XII</h3>
+                <p>Pri Ario Damar, Naning Widayati</p>
+                <span class="stars">★★★★★</span>
+                <div class="book-bottom">
+                  <strong>Rp45.000</strong
+                  ><a class="detail-link" aria-disabled="true"
+                    >LIHAT DETAIL →</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="community-banner">
+          <div class="community-copy">
+            <p class="eyebrow">BAGIAN DARI KOMUNITAS BACA</p>
+            <h2>Dapatkan kabar dan agenda literasi desa.</h2>
+            <p>
+              Daftarkan email untuk mengetahui koleksi baru dan kegiatan
+              berikutnya.
+            </p>
+            <div class="subscribe">
+              <button
+                type="button"
+                aria-label="Form daftar segera hadir"
+                disabled
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </section>
+        <section id="tentang" class="trust-row">
+          <div class="trust">
+            <b>♧</b
+            ><span
+              ><strong>Koleksi untuk semua</strong
+              ><small>Fiksi, pendidikan, dan keterampilan</small></span
+            >
+          </div>
+          <div class="trust">
+            <b>♙</b
+            ><span
+              ><strong>Ruang belajar bersama</strong
+              ><small>Nyaman untuk membaca dan berdiskusi</small></span
+            >
+          </div>
+          <div class="trust">
+            <b>◷</b
+            ><span
+              ><strong>Jam operasional</strong
+              ><small>Senin–Jumat, 08.00–16.00</small></span
+            >
+          </div>
+          <div class="trust">
+            <b>⌖</b
+            ><span
+              ><strong>Lokasi mudah dijangkau</strong
+              ><small>Balai Desa Sukamaju, Kab. Bandung</small></span
+            >
+          </div>
+        </section>
+        <section class="about-panel" aria-label="Tentang Perpustakaan Desa">
+          <img src="/assets/Books to read.jpg" alt="Suasana ruang Perpustakaan Desa" />
+          <div>
+            <p class="eyebrow">TENTANG KAMI</p>
+            <h2>Tentang Perpustakaan Desa</h2>
+            <p>
+              Perpustakaan Desa adalah ruang belajar bersama milik warga. Semua
+              koleksi buku dan kegiatan literasi kami terbuka gratis untuk siapa
+              saja yang tinggal di desa, tanpa biaya keanggotaan.
+            </p>
+            <div class="about-facts">
+              <span
+                ><b>JAM OPERASIONAL</b
+                ><span
+                  >Senin: 08.00–16.00<br />Selasa: 08.00–16.00<br />Rabu:
+                  08.00–16.00<br />Kamis: 08.00–16.00<br />Jumat: 08.00–16.00<br />Sabtu:
+                  09.00–13.00<br />Minggu: Tutup</span
+                ></span
+              ><span
+                ><b>LOKASI</b
+                ><span>Balai Desa Sukamaju,<br />Kab. Bandung</span></span
+              ><span
+                ><b>KONTAK</b
+                ><span class="contact-detail"
+                  ><img src="assets/contact.png" alt="" />(022) 123-4567</span
+                ></span
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="kontak">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="logo" href="beranda.html"
+            ><span class="logo-mark">♧</span
+            ><span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span></a
+          >
+          <p>
+            Ruang belajar bersama milik warga. Mari menumbuhkan pengetahuan,
+            satu halaman setiap hari.
+          </p>
+          <div class="socials">
+            <a href="#kontak">f</a><a href="#kontak">ig</a
+            ><a href="#kontak">▶</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>JELAJAHI</h3>
+            <a href="beranda.html">Beranda</a
+            ><a aria-disabled="true">Katalog Buku</a
+            ><a href="#kategori">Kategori</a>
+          </div>
+          <div>
+            <h3>INFORMASI</h3>
+            <a href="#tentang">Tentang Kami</a><a href="#tentang">Jam Buka</a
+            ><a href="#kontak">Kontak</a>
+          </div>
+          <div>
+            <h3>ALAMAT</h3>
+            <a href="#tentang">Balai Desa Sukamaju</a
+            ><a href="#tentang">Kab. Bandung</a
+            ><a href="tel:+62221234567">(022) 123-4567</a>
+          </div>
+        </div>
+        <div class="footer-news">
+          <h3>BERITA LITERASI</h3>
+          <p>Dapatkan informasi kegiatan terbaru kami.</p>
+          <div class="subscribe">
+            <button
+              type="button"
+              aria-label="Form daftar segera hadir"
+              disabled
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 Perpustakaan Desa Sukamaju. Seluruh hak cipta dilindungi.
+      </div>
+      x
+    </footer>
+  </body>
+</html>

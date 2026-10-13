@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Peminjaman - Perpustakaan Buku Desa</title>
+<link rel="stylesheet" href="/styles/form_peminjaman.css">
+<link rel="stylesheet" href="/styles/global.css">
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="brand-row">
+            <span class="brand-mark" aria-hidden="true">&#128214;</span>
+            <span class="brand">Perpustakaan Desa</span>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="header-content">
+                    <h1>Form Peminjaman</h1>
+                    <p>Lengkapi form berikut untuk mengajukan peminjaman buku.</p>
+                </div>
+            </div>
+
+            <form id="loanForm">
+                <div class="field">
+                    <label for="nama">Nama Peminjam</label>
+                    <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+                </div>
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="anggota">No. Anggota <span class="hint">(opsional)</span></label>
+                        <input type="text" id="anggota" name="anggota" placeholder="Mis. A-0231">
+                    </div>
+                    <div class="field">
+                        <label for="telepon">No. WhatsApp</label>
+                        <input type="tel" id="telepon" name="telepon" placeholder="08xx-xxxx-xxxx" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="judul">Judul Buku</label>
+                    <input type="text" id="judul" name="judul" placeholder="Judul buku yang ingin dipinjam" required>
+                </div>
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="tglPinjam">Tanggal Pinjam</label>
+                        <input type="date" id="tglPinjam" name="tglPinjam" required>
+                    </div>
+                    <div class="field">
+                        <label for="tglKembali">Tanggal Kembali</label>
+                        <input type="date" id="tglKembali" name="tglKembali" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="catatan">Catatan <span class="hint">(opsional)</span></label>
+                    <textarea id="catatan" name="catatan" placeholder="Tambahkan catatan jika diperlukan"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Ajukan Peminjaman &nbsp;&rarr;</button>
+                <p class="note">Data Anda hanya digunakan untuk keperluan administrasi peminjaman buku.</p>
+            </form>
+
+            <div class="confirm" id="confirmBox">
+                <div class="check">&#10003;</div>
+                <h2>Pengajuan Terkirim</h2>
+                <p>Terima kasih. Permintaan peminjaman buku Anda telah diterima dan akan segera diproses.</p>
+                <button type="button" class="btn-secondary" id="resetBtn">Ajukan Peminjaman Lain</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('loanForm');
+        const confirmBox = document.getElementById('confirmBox');
+        const resetBtn = document.getElementById('resetBtn');
+
+        const tglPinjam = document.getElementById('tglPinjam');
+        const tglKembali = document.getElementById('tglKembali');
+        tglPinjam.addEventListener('change', () => {
+            tglKembali.min = tglPinjam.value;
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            form.style.display = 'none';
+            confirmBox.style.display = 'block';
+        });
+
+        resetBtn.addEventListener('click', function () {
+            form.reset();
+            confirmBox.style.display = 'none';
+            form.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

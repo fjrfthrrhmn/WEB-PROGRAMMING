@@ -1,0 +1,450 @@
+<!doctype html>
+
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta
+            content="Detail dan Peminjaman Buku Informatika Untuk SMA Kelas XII - Perpustakaan Desa Sukamaju"
+            name="description"
+        />
+        <title>
+            Informatika Untuk SMA Kelas XII - Detail Buku | Perpustakaan Desa
+            Sukamaju
+        </title>
+        <!--<link href="/styles/global.css" rel="stylesheet" />-->
+        <link href="../styles/detail_produk.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <p>
+                    🚚 Layanan peminjaman buku perpustakaan untuk seluruh warga
+                    desa
+                </p>
+                <div class="utility">
+                    <span>✦ Ruang baca, digital &amp; buku fisik</span>
+                    <span>☎ (022) 123-4567</span>
+                </div>
+            </div>
+        </div>
+        <!-- Header Navigation -->
+        <header class="site-header">
+            <div class="container">
+                <a class="logo" href="beranda.html">
+                    <span class="logo-mark">♧</span>
+                    <span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span>
+                </a>
+                <nav aria-label="Navigasi utama" class="main-nav">
+                    <a href="beranda.html">BERANDA</a>
+                    <a class="active" href="produk.html">KATALOG BUKU</a>
+                    <a href="auth-login.html">LOGIN</a>
+                    <a href="auth-regist.html">REGIST</a>
+                    <a href="form_peminjaman.html">PINJAM BUKU</a>
+                </nav>
+                <div class="header-actions">
+                    <form class="search-box" role="search">
+                        <input
+                            type="search"
+                            aria-label="Cari buku"
+                            placeholder="Cari buku..."
+                        /><button type="button" aria-label="Cari" disabled>
+                            ⌕
+                        </button>
+                    </form>
+                    <a href="#kontak" aria-label="Hubungi kami">♙</a>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <!-- Breadcrumb & Back Action -->
+            <div class="detail-nav-bar">
+                <a
+                    aria-label="Kembali ke halaman katalog"
+                    class="btn-back"
+                    href="produk.html"
+                    id="backToCatalogBtn"
+                >
+                    <span>←</span> Kembali ke Koleksi
+                </a>
+                <nav aria-label="Breadcrumb" class="detail-breadcrumb">
+                    <a href="beranda.html">Beranda</a>
+                    <span>/</span>
+                    <a href="produk.html">Katalog Buku</a>
+                    <span>/</span>
+                    <span style="color: var(--ink); font-weight: 600"
+                        >Informatika Untuk SMA Kelas XII</span
+                    >
+                </nav>
+            </div>
+            <!-- Main Showcase Card -->
+            <article class="product-showcase">
+                <!-- Left Column: Cover, Badges, Digital Reading -->
+                <div class="book-media-col">
+                    <div class="book-cover-frame">
+                        <img
+                            alt="Sampul buku resmi Informatika Untuk SMA Kelas XII Kementerian Pendidikan"
+                            id="bookDetailCover"
+                            src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
+                        />
+                    </div>
+                    <div class="media-badges-row">
+                        <span class="badge-type">📚 FISIK &amp; DIGITAL</span>
+                        <span class="badge-library-code">🔖 Rak: ED-012</span>
+                        <span class="badge-library-code"
+                            >🏷️ Kurikulum Merdeka</span
+                        >
+                    </div>
+                    <!-- Digital Access Box -->
+                    <div class="digital-actions-card">
+                        <span class="digital-card-title"
+                            >📱 Akses Versi Digital Langsung</span
+                        >
+                        <div class="digital-btn-row">
+                            <a
+                                class="btn-read-online"
+                                href="https://static-sc.cloudapp.web.id/content/pdf/bukuteks/kurikulum21/Informatika_BS_KLS_XII.pdf"
+                                rel="noopener"
+                                target="_blank"
+                            >
+                                <span>📖</span> Baca Online
+                            </a>
+                            <a
+                                class="btn-download-pdf"
+                                download="Informatika_BS_KLS_XII.pdf"
+                                href="https://static-sc.cloudapp.web.id/content/pdf/bukuteks/kurikulum21/Informatika_BS_KLS_XII.pdf"
+                            >
+                                <span>⬇️</span> Unduh PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Metadata, Availability, Borrow Action -->
+                <div class="book-details-col">
+                    <span class="book-genre-pill"
+                        >Pendidikan • Teknologi Informasi</span
+                    >
+                    <h1 class="book-title" id="bookTitleHeading">
+                        Informatika Untuk SMA Kelas XII
+                    </h1>
+                    <div class="book-author-meta">
+                        <span
+                            >Oleh:
+                            <strong
+                                >Pri Ario Damar, Naning Widayati</strong
+                            ></span
+                        >
+                        <span class="meta-divider">•</span>
+                        <span>Tahun: <strong>2022</strong></span>
+                        <span class="meta-divider">•</span>
+                        <span
+                            >Penerbit:
+                            <strong>Kementerian Pendidikan</strong></span
+                        >
+                    </div>
+                    <!-- Stock & Availability Indicator -->
+                    <div
+                        aria-label="Informasi ketersediaan stok buku"
+                        class="stock-status-box"
+                    >
+                        <div class="stock-box-header">
+                            <span class="stock-box-title"
+                                >Status Ketersediaan Perpustakaan</span
+                            >
+                            <div
+                                class="stock-badge-live stock-badge-available"
+                                id="stockStatusBadge"
+                            >
+                                <span class="dot"></span>
+                                <span id="stockStatusText"
+                                    >Tersedia untuk Dipinjam</span
+                                >
+                            </div>
+                        </div>
+                        <div class="stock-channels">
+                            <div class="channel-card">
+                                <span class="channel-name"
+                                    >🏢 Salinan Fisik di Balai Desa</span
+                                >
+                                <div
+                                    class="channel-value"
+                                    id="physicalStockCount"
+                                >
+                                    5 Eksemplar Tersedia
+                                </div>
+                                <div class="channel-note">
+                                    Bisa diambil langsung di meja layanan
+                                </div>
+                            </div>
+                            <div class="channel-card">
+                                <span class="channel-name"
+                                    >🌐 Akses Digital Warga</span
+                                >
+                                <div class="channel-value">Tersedia Bebas</div>
+                                <div class="channel-note">
+                                    Tanpa kuota antrean, gratis
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Main CTA: Borrow & Favorite -->
+                    <div class="primary-actions-row">
+                        <a
+                            class="btn-borrow-main"
+                            href="form_peminjaman.html?book=informatika-xii"
+                            id="btnPinjamBuku"
+                        >
+                            <span>▤</span> Pinjam Buku Ini
+                        </a>
+                        <button
+                            aria-label="Tambah buku ini ke koleksi favorit"
+                            class="btn-favorite-detail"
+                            id="btnFavoriteDetail"
+                            type="button"
+                        >
+                            <span class="heart-icon">♥</span>
+                            <span id="favDetailLabel">Tambah ke Favorit</span>
+                        </button>
+                    </div>
+                    <!-- Synopsis / Description -->
+                    <section
+                        aria-labelledby="synopsis-title"
+                        class="section-block"
+                    >
+                        <h2 id="synopsis-title">Sinopsis Buku</h2>
+                        <p class="synopsis-text">
+                            Buku teks Informatika untuk SMA Kelas XII ini
+                            disusun berdasarkan Kurikulum Merdeka untuk
+                            membekali siswa dengan pemahaman mendalam tentang
+                            berpikir komputasional, rekayasa perangkat lunak,
+                            analisis data, keamanan siber, dan dampak sosial
+                            informatika di era kecerdasan buatan. Materi
+                            disajikan secara kontekstual dengan latihan praktis
+                            yang mudah diaplikasikan oleh pelajar di lingkungan
+                            desa maupun perkotaan.
+                        </p>
+                    </section>
+                    <!-- Specifications Table / Editorial Meta -->
+                    <section
+                        aria-labelledby="specs-title"
+                        class="section-block"
+                    >
+                        <h2 id="specs-title">
+                            Spesifikasi &amp; Detail Katalog
+                        </h2>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Penulis</span>
+                                <span class="spec-val"
+                                    >Pri Ario Damar, Naning Widayati</span
+                                >
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Penerbit</span>
+                                <span class="spec-val"
+                                    >Pusat Perbukuan Kemendikbudristek</span
+                                >
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Tahun Terbit</span>
+                                <span class="spec-val"
+                                    >2022 (Cetakan Pertama)</span
+                                >
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label"
+                                    >ISBN / Identifikasi</span
+                                >
+                                <span class="spec-val">978-602-244-884-6</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Jumlah Halaman</span>
+                                <span class="spec-val">288 Halaman</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Bahasa</span>
+                                <span class="spec-val">Bahasa Indonesia</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Format Buku</span>
+                                <span class="spec-val"
+                                    >Buku Cetak Softcover &amp; Digital
+                                    PDF</span
+                                >
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label"
+                                    >Lokasi Rak Balai Desa</span
+                                >
+                                <span class="spec-val"
+                                    >Lantai 1, Rak ED-012 (Pendidikan)</span
+                                >
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+            <!-- Related Books Section -->
+            <section class="related-section">
+                <div class="related-header">
+                    <div>
+                        <p
+                            style="
+                                font-size: 11px;
+                                font-weight: 700;
+                                color: var(--blue);
+                                letter-spacing: 0.1em;
+                                text-transform: uppercase;
+                            "
+                        >
+                            REKOMENDASI TERKAIT
+                        </p>
+                        <h2>Buku Serupa untuk Dipelajari</h2>
+                    </div>
+                    <a class="related-link" href="produk.html"
+                        >Lihat Semua di Katalog →</a
+                    >
+                </div>
+                <div class="related-grid">
+                    <article class="related-card">
+                        <div class="related-cover">
+                            <img
+                                alt="Informatika Kelas XI"
+                                src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                            />
+                        </div>
+                        <h3 class="related-title">
+                            Informatika Untuk SMA Kelas XI
+                        </h3>
+                        <p class="related-author">Pri Ario Damar</p>
+                    </article>
+                    <article class="related-card">
+                        <div class="related-cover">
+                            <img
+                                alt="Dasar Pemrograman Python"
+                                src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                            />
+                        </div>
+                        <h3 class="related-title">
+                            Dasar Jaringan Komputer Desa
+                        </h3>
+                        <p class="related-author">Tim Litbang Desa</p>
+                    </article>
+                    <article class="related-card">
+                        <div class="related-cover">
+                            <img
+                                alt="Kewirausahaan Agribisnis"
+                                src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                            />
+                        </div>
+                        <h3 class="related-title">Kewirausahaan Agribisnis</h3>
+                        <p class="related-author">Dr. Hendra Gunawan</p>
+                    </article>
+                    <article class="related-card">
+                        <div class="related-cover">
+                            <img
+                                alt="Konservasi Mata Air"
+                                src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                            />
+                        </div>
+                        <h3 class="related-title">
+                            Konservasi Hutan &amp; Mata Air
+                        </h3>
+                        <p class="related-author">Komunitas Sahabat Bumi</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <!-- Footer Konsisten dari beranda.html -->
+        <footer id="kontak">
+            <div class="container footer-main">
+                <div class="footer-brand">
+                    <a class="logo" href="beranda.html">
+                        <span class="logo-mark">♧</span>
+                        <span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span>
+                    </a>
+                    <p>
+                        Ruang belajar bersama milik warga. Menumbuhkan
+                        pengetahuan dan budaya membaca bagi generasi masa depan.
+                    </p>
+                    <div class="socials">
+                        <a aria-label="Facebook" href="#kontak">f</a>
+                        <a aria-label="Instagram" href="#kontak">ig</a>
+                        <a aria-label="YouTube" href="#kontak">▶</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h3>JELAJAHI</h3>
+                        <a href="beranda.html">Beranda</a>
+                        <a href="produk.html">Katalog Buku</a>
+                        <a href="form_peminjaman.html">Form Pinjam</a>
+                    </div>
+                    <div>
+                        <h3>INFORMASI</h3>
+                        <a href="beranda.html#tentang">Tentang Kami</a>
+                        <a href="beranda.html#tentang">Jam Buka</a>
+                        <a href="#kontak">Kontak</a>
+                    </div>
+                    <div>
+                        <h3>ALAMAT</h3>
+                        <a href="beranda.html#tentang">Balai Desa Sukamaju</a>
+                        <a href="beranda.html#tentang">Kab. Bandung</a>
+                        <a href="tel:+62221234567">(022) 123-4567</a>
+                    </div>
+                </div>
+                <div class="footer-news">
+                    <h3>BERITA LITERASI</h3>
+                    <p>
+                        Dapatkan informasi buku baru &amp; agenda bedah buku
+                        mingguan warga.
+                    </p>
+                    <div style="font-size: 11px; color: #93c5fd">
+                        Buka: Senin–Jumat 08.00–16.00
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Perpustakaan Desa Sukamaju. Seluruh hak cipta dilindungi.
+            </div>
+        </footer>
+        <!-- Interactive Script for Detail Actions -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const favBtn = document.getElementById("btnFavoriteDetail");
+              const favLabel = document.getElementById("favDetailLabel");
+              const borrowBtn = document.getElementById("btnPinjamBuku");
+
+              // Favorite Button Toggle
+              let isFav = false;
+              favBtn.addEventListener("click", () => {
+                isFav = !isFav;
+                if (isFav) {
+                  favBtn.classList.add("active");
+                  favLabel.textContent = "Tersimpan di Favorit";
+                } else {
+                  favBtn.classList.remove("active");
+                  favLabel.textContent = "Tambah ke Favorit";
+                }
+              });
+
+              // Demo Stock Handler (Jika buku diset habis)
+              window.setStockState = function(state) {
+                const badge = document.getElementById("stockStatusBadge");
+                const text = document.getElementById("stockStatusText");
+                const count = document.getElementById("physicalStockCount");
+
+                if (state === "out") {
+                  badge.className = "stock-badge-live" style="background: #fef2f2; color: #991b1b;";
+                  text.textContent = "Saat Ini Habis Dipinjam";
+                  count.textContent = "0 Eksemplar Tersisa";
+                  borrowBtn.classList.add("disabled");
+                  borrowBtn.removeAttribute("href");
+                  borrowBtn.innerHTML = "<span>✕</span> Stok Fisik Habis";
+                }
+              };
+            });
+        </script>
+    </body>
+</html>

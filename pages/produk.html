@@ -1,0 +1,834 @@
+<!doctype html>
+
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta
+            content="Katalog Koleksi Buku Perpustakaan Desa Sukamaju. Pinjam buku digital dan buku fisik secara gratis untuk seluruh warga desa."
+            name="description"
+        />
+        <title>Katalog Koleksi Buku | Perpustakaan Desa Sukamaju</title>
+        <!--<link href="/styles/global.css" rel="stylesheet" />-->
+        <link href="../styles/produk.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <p>
+                    🚚 Layanan peminjaman buku perpustakaan untuk seluruh warga
+                    desa
+                </p>
+                <div class="utility">
+                    <span>✦ Ruang baca, digital &amp; buku fisik</span>
+                    <span>☎ (022) 123-4567</span>
+                </div>
+            </div>
+        </div>
+        <!-- Header Navigation -->
+        <header class="site-header">
+            <div class="container">
+                <a class="logo" href="beranda.html">
+                    <span class="logo-mark">♧</span>
+                    <span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span>
+                </a>
+                <nav aria-label="Navigasi utama" class="main-nav">
+                    <a href="beranda.html">BERANDA</a>
+                    <a class="active" href="produk.html">KATALOG BUKU</a>
+                    <a href="auth-login.html">LOGIN</a>
+                    <a href="auth-regist.html">REGIST</a>
+                    <a href="form_peminjaman.html">PINJAM BUKU</a>
+                </nav>
+                <div class="header-actions">
+                    <form class="search-box" role="search">
+                        <input
+                            type="search"
+                            aria-label="Cari buku"
+                            placeholder="Cari buku..."
+                        /><button type="button" aria-label="Cari" disabled>
+                            ⌕
+                        </button>
+                    </form>
+                    <a href="#kontak" aria-label="Hubungi kami">♙</a>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <!-- Page Header Intro -->
+            <section class="catalog-intro">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <a href="beranda.html">Beranda</a>
+                    <span>/</span>
+                    <span style="color: var(--ink); font-weight: 600"
+                        >Katalog Buku</span
+                    >
+                </nav>
+                <p class="eyebrow">KOLEKSI LENGKAP WARGA</p>
+                <h1>Jelajahi Koleksi Buku</h1>
+                <p>
+                    Temukan dan pinjam ribuan buku berkualitas, mulai dari buku
+                    bacaan digital gratis hingga buku cetak fisik yang siap
+                    diambil di balai desa.
+                </p>
+            </section>
+            <!-- Search & Filter Card -->
+            <section
+                aria-label="Alat pencarian dan penyaringan"
+                class="toolbar-card"
+            >
+                <!-- Search bar -->
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input
+                        aria-label="Cari buku dalam katalog"
+                        class="main-search-input"
+                        id="bookSearchInput"
+                        placeholder="Cari judul buku, penulis, atau genre (cth: Informatika, Pri Ario, Pendidikan)..."
+                        type="search"
+                    />
+                    <button
+                        aria-label="Hapus pencarian"
+                        class="search-clear-btn"
+                        id="searchClearBtn"
+                        type="button"
+                    >
+                        ✕
+                    </button>
+                </div>
+                <!-- Filter Row -->
+                <div class="filter-row">
+                    <!-- Filter 1: Format Buku -->
+                    <div class="filter-group">
+                        <span class="filter-label">Jenis Buku</span>
+                        <div
+                            aria-label="Pilih format buku"
+                            class="segmented-control"
+                            role="group"
+                        >
+                            <button
+                                class="seg-btn active"
+                                data-filter-type="all"
+                                type="button"
+                            >
+                                Semua
+                            </button>
+                            <button
+                                class="seg-btn"
+                                data-filter-type="digital"
+                                type="button"
+                            >
+                                Buku Digital
+                            </button>
+                            <button
+                                class="seg-btn"
+                                data-filter-type="physical"
+                                type="button"
+                            >
+                                Buku Fisik
+                            </button>
+                            <button
+                                class="seg-btn"
+                                data-filter-type="both"
+                                type="button"
+                            >
+                                Fisik &amp; Digital
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Filter 2: Ketersediaan Stok -->
+                    <div class="filter-group">
+                        <span class="filter-label">Ketersediaan Stok</span>
+                        <select
+                            aria-label="Pilih ketersediaan stok"
+                            class="custom-select"
+                            id="stockFilter"
+                        >
+                            <option value="all">Semua Status</option>
+                            <option value="available">Tersedia</option>
+                            <option value="limited">Stok Terbatas</option>
+                            <option value="out">Habis Dipinjam</option>
+                        </select>
+                    </div>
+                    <!-- Filter 3: Genre / Kategori -->
+                    <div class="filter-group">
+                        <span class="filter-label">Genre Buku</span>
+                        <select
+                            aria-label="Pilih genre buku"
+                            class="custom-select"
+                            id="genreFilter"
+                        >
+                            <option value="all">Semua Genre</option>
+                            <option value="Pendidikan">
+                                Pendidikan &amp; Sekolah
+                            </option>
+                            <option value="Teknologi">
+                                Teknologi &amp; Komputer
+                            </option>
+                            <option value="Fiksi">Fiksi &amp; Cerita</option>
+                            <option value="Nonfiksi">
+                                Nonfiksi &amp; Umum
+                            </option>
+                            <option value="Bisnis">
+                                Bisnis &amp; Pertanian
+                            </option>
+                            <option value="Sejarah">Sejarah Kebangsaan</option>
+                            <option value="Pengembangan Diri">
+                                Pengembangan Diri
+                            </option>
+                        </select>
+                    </div>
+                    <!-- Filter Reset -->
+                    <button
+                        class="filter-reset-btn"
+                        id="resetFilterBtn"
+                        type="button"
+                    >
+                        <span>↺</span> Reset Filter
+                    </button>
+                </div>
+            </section>
+            <!-- Active Filter Status & Count -->
+            <div class="results-bar">
+                <p class="results-count" id="resultsCount">
+                    Menampilkan <strong>8 koleksi buku</strong> siap pinjam
+                </p>
+                <div class="active-chips" id="activeChipsContainer">
+                    <!-- Filter chips dynamically injected or displayed -->
+                    <span class="chip">Status: Semua</span>
+                </div>
+            </div>
+            <!-- Book Catalog Grid -->
+            <section aria-label="Daftar buku" class="book-grid" id="bookGrid">
+                <!-- Item 1 (Main Sample Book) -->
+                <article
+                    class="book-card"
+                    data-genre="Pendidikan"
+                    data-stock="available"
+                    data-type="both"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-both"
+                            >FISIK &amp; DIGITAL</span
+                        >
+                        <button
+                            aria-label="Tambah Informatika Untuk SMA Kelas XII ke Favorit"
+                            class="btn-favorite"
+                            title="Tambah ke Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul buku Informatika Untuk SMA Kelas XII"
+                            loading="lazy"
+                            src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Pendidikan • Teknologi</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Informatika Untuk SMA Kelas XII</a
+                            >
+                        </h2>
+                        <p class="card-author">
+                            Oleh: Pri Ario Damar, Naning Widayati
+                        </p>
+                        <div class="stock-status status-available">
+                            <span class="status-dot"></span>
+                            <span>Tersedia — 5 eksemplar fisik</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 2 -->
+                <article
+                    class="book-card"
+                    data-genre="Teknologi"
+                    data-stock="available"
+                    data-type="digital"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-digital"
+                            >DIGITAL (PDF/EPUB)</span
+                        >
+                        <button
+                            aria-label="Tambah ke Favorit"
+                            class="btn-favorite"
+                            title="Tambah ke Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul Dasar Jaringan Komputer &amp; Internet"
+                            loading="lazy"
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Teknologi</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Dasar Jaringan Komputer &amp; Internet Warga</a
+                            >
+                        </h2>
+                        <p class="card-author">
+                            Oleh: Pusat Kurikulum &amp; Perbukuan
+                        </p>
+                        <div class="stock-status status-available">
+                            <span class="status-dot"></span>
+                            <span>Tersedia — Akses Digital Bebas</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 3 -->
+                <article
+                    class="book-card"
+                    data-genre="Pendidikan"
+                    data-stock="limited"
+                    data-type="physical"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-physical">FISIK</span>
+                        <button
+                            aria-label="Hapus dari Favorit"
+                            class="btn-favorite active"
+                            title="Tersimpan di Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul Panduan Pembelajaran Interaktif"
+                            loading="lazy"
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Pendidikan</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Informatika Lanjutan &amp; Logika Komputasi</a
+                            >
+                        </h2>
+                        <p class="card-author">Oleh: Pri Ario Damar</p>
+                        <div class="stock-status status-limited">
+                            <span class="status-dot"></span>
+                            <span>Stok Terbatas — Tersisa 2 eksemplar</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 4 -->
+                <article
+                    class="book-card"
+                    data-genre="Fiksi"
+                    data-stock="out"
+                    data-type="physical"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-physical">FISIK</span>
+                        <button
+                            aria-label="Tambah ke Favorit"
+                            class="btn-favorite"
+                            title="Tambah ke Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul Cerita Rakyat &amp; Kearifan Nusantara"
+                            loading="lazy"
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Fiksi • Sejarah</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Cerita Rakyat &amp; Kearifan Pasundan</a
+                            >
+                        </h2>
+                        <p class="card-author">Oleh: Tim Balai Pustaka Desa</p>
+                        <div class="stock-status status-out">
+                            <span class="status-dot"></span>
+                            <span>Habis Dipinjam — Kembali 28 Okt</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 5 -->
+                <article
+                    class="book-card"
+                    data-genre="Bisnis"
+                    data-stock="available"
+                    data-type="both"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-both"
+                            >FISIK &amp; DIGITAL</span
+                        >
+                        <button
+                            aria-label="Tambah ke Favorit"
+                            class="btn-favorite"
+                            title="Tambah ke Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul Manajemen Usaha Tani Desa Mandiri"
+                            loading="lazy"
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Bisnis • Pertanian</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Kewirausahaan Agribisnis &amp; UMKM Desa</a
+                            >
+                        </h2>
+                        <p class="card-author">
+                            Oleh: Dr. Hendra Gunawan, M.Si
+                        </p>
+                        <div class="stock-status status-available">
+                            <span class="status-dot"></span>
+                            <span>Tersedia — 7 eksemplar fisik</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 6 -->
+                <article
+                    class="book-card"
+                    data-genre="Pengembangan Diri"
+                    data-stock="available"
+                    data-type="digital"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-digital"
+                            >DIGITAL (E-BOOK)</span
+                        >
+                        <button
+                            aria-label="Tambah ke Favorit"
+                            class="btn-favorite"
+                            title="Tambah ke Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul Menata Finansial Keluarga Sejahtera"
+                            loading="lazy"
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Pengembangan Diri</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Cerdas Finansial Rumah Tangga</a
+                            >
+                        </h2>
+                        <p class="card-author">Oleh: Wening Sulistyowati</p>
+                        <div class="stock-status status-available">
+                            <span class="status-dot"></span>
+                            <span>Tersedia — Akses Digital Bebas</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 7 -->
+                <article
+                    class="book-card"
+                    data-genre="Sejarah"
+                    data-stock="limited"
+                    data-type="physical"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-physical">FISIK</span>
+                        <button
+                            aria-label="Tambah ke Favorit"
+                            class="btn-favorite"
+                            title="Tambah ke Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul Babad Tanah Priangan &amp; Sukamaju"
+                            loading="lazy"
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Sejarah</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Jejak Langkah &amp; Babad Desa Sukamaju</a
+                            >
+                        </h2>
+                        <p class="card-author">
+                            Oleh: Lembaga Adat Desa Sukamaju
+                        </p>
+                        <div class="stock-status status-limited">
+                            <span class="status-dot"></span>
+                            <span>Stok Terbatas — Tersisa 1 eksemplar</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 8 -->
+                <article
+                    class="book-card"
+                    data-genre="Nonfiksi"
+                    data-stock="available"
+                    data-type="both"
+                >
+                    <div class="card-cover-wrapper">
+                        <span class="card-format-tag tag-both"
+                            >FISIK &amp; DIGITAL</span
+                        >
+                        <button
+                            aria-label="Tambah ke Favorit"
+                            class="btn-favorite"
+                            title="Tambah ke Favorit"
+                            type="button"
+                        >
+                            ♥
+                        </button>
+                        <img
+                            alt="Sampul Menjaga Kelestarian Air Desa"
+                            loading="lazy"
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                        />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-genre">Nonfiksi • Lingkungan</span>
+                        <h2 class="card-title">
+                            <a href="detail_produk.html"
+                                >Konservasi Mata Air &amp; Hutan Desa</a
+                            >
+                        </h2>
+                        <p class="card-author">Oleh: Komunitas Sahabat Bumi</p>
+                        <div class="stock-status status-available">
+                            <span class="status-dot"></span>
+                            <span>Tersedia — 4 eksemplar fisik</span>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn-detail" href="detail_produk.html">
+                                <span>Lihat Detail Buku</span> →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Empty State UI -->
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-state-icon">📖</div>
+                    <h3>Tidak ada buku yang sesuai</h3>
+                    <p>
+                        Coba gunakan kata kunci pencarian lain atau setel ulang
+                        filter kategori dan ketersediaan stok.
+                    </p>
+                    <button
+                        class="btn-detail"
+                        onclick="resetAllFilters()"
+                        style="width: auto; margin: auto; padding: 8px 20px"
+                        type="button"
+                    >
+                        Kembalikan Semua Buku
+                    </button>
+                </div>
+            </section>
+            <!-- Pagination -->
+            <nav aria-label="Navigasi halaman katalog" class="pagination-row">
+                <button
+                    aria-label="Halaman sebelumnya"
+                    class="page-btn"
+                    disabled=""
+                    type="button"
+                >
+                    ‹
+                </button>
+                <button
+                    aria-current="page"
+                    class="page-btn active"
+                    type="button"
+                >
+                    1
+                </button>
+                <button class="page-btn" type="button">2</button>
+                <button class="page-btn" type="button">3</button>
+                <button
+                    aria-label="Halaman berikutnya"
+                    class="page-btn"
+                    type="button"
+                >
+                    ›
+                </button>
+            </nav>
+        </main>
+        <!-- Footer Konsisten dari beranda.html -->
+        <footer id="kontak">
+            <div class="container footer-main">
+                <div class="footer-brand">
+                    <a class="logo" href="beranda.html">
+                        <span class="logo-mark">♧</span>
+                        <span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span>
+                    </a>
+                    <p>
+                        Ruang belajar bersama milik warga. Menumbuhkan
+                        pengetahuan dan budaya membaca bagi generasi masa depan.
+                    </p>
+                    <div class="socials">
+                        <a aria-label="Facebook" href="#kontak">f</a>
+                        <a aria-label="Instagram" href="#kontak">ig</a>
+                        <a aria-label="YouTube" href="#kontak">▶</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h3>JELAJAHI</h3>
+                        <a href="beranda.html">Beranda</a>
+                        <a href="produk.html">Katalog Buku</a>
+                        <a href="form_peminjaman.html">Form Pinjam</a>
+                    </div>
+                    <div>
+                        <h3>INFORMASI</h3>
+                        <a href="beranda.html#tentang">Tentang Kami</a>
+                        <a href="beranda.html#tentang">Jam Buka</a>
+                        <a href="#kontak">Kontak</a>
+                    </div>
+                    <div>
+                        <h3>ALAMAT</h3>
+                        <a href="beranda.html#tentang">Balai Desa Sukamaju</a>
+                        <a href="beranda.html#tentang">Kab. Bandung</a>
+                        <a href="tel:+62221234567">(022) 123-4567</a>
+                    </div>
+                </div>
+                <div class="footer-news">
+                    <h3>BERITA LITERASI</h3>
+                    <p>
+                        Dapatkan informasi buku baru &amp; agenda bedah buku
+                        mingguan warga.
+                    </p>
+                    <form
+                        class="subscribe-box"
+                        onsubmit="
+                            event.preventDefault();
+                            alert('Terima kasih telah mendaftar!');
+                        "
+                    >
+                        <input
+                            aria-label="Email buletin"
+                            placeholder="Masukkan email Anda..."
+                            required=""
+                            type="email"
+                        />
+                        <button aria-label="Kirim" type="submit">"&gt;→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Perpustakaan Desa Sukamaju. Seluruh hak cipta dilindungi.
+            </div>
+        </footer>
+        <!-- Interactive Script for Real-time Search, Filters & Favorites -->
+        <!--<script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const searchInput = document.getElementById("bookSearchInput");
+                const clearBtn = document.getElementById("searchClearBtn");
+                const segButtons = document.querySelectorAll(".seg-btn");
+                const stockFilter = document.getElementById("stockFilter");
+                const genreFilter = document.getElementById("genreFilter");
+                const resetBtn = document.getElementById("resetFilterBtn");
+                const bookCards = document.querySelectorAll(".book-card");
+                const emptyState = document.getElementById("emptyState");
+                const resultsCount = document.getElementById("resultsCount");
+                const chipsContainer = document.getElementById(
+                    "activeChipsContainer",
+                );
+                const favButtons = document.querySelectorAll(".btn-favorite");
+
+                let activeType = "all";
+
+                // Favorite Toggle
+                favButtons.forEach((btn) => {
+                    btn.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        btn.classList.toggle("active");
+                        if (btn.classList.contains("active")) {
+                            btn.setAttribute("title", "Tersimpan di Favorit");
+                        } else {
+                            btn.setAttribute("title", "Tambah ke Favorit");
+                        }
+                    });
+                });
+
+                // Filter Logic
+                function filterBooks() {
+                    const query = searchInput.value.toLowerCase().trim();
+                    const selectedStock = stockFilter.value;
+                    const selectedGenre = genreFilter.value;
+                    let visibleCount = 0;
+
+                    clearBtn.style.display = query ? "block" : "none";
+
+                    bookCards.forEach((card) => {
+                        const cardType = card.getAttribute("data-type");
+                        const cardStock = card.getAttribute("data-stock");
+                        const cardGenre = card.getAttribute("data-genre");
+                        const title = card
+                            .querySelector(".card-title")
+                            .textContent.toLowerCase();
+                        const author = card
+                            .querySelector(".card-author")
+                            .textContent.toLowerCase();
+
+                        // Match Type
+                        let matchType =
+                            activeType === "all" ||
+                            cardType === activeType ||
+                            (activeType === "digital" && cardType === "both") ||
+                            (activeType === "physical" && cardType === "both");
+
+                        // Match Stock
+                        let matchStock =
+                            selectedStock === "all" ||
+                            cardStock === selectedStock;
+
+                        // Match Genre
+                        let matchGenre =
+                            selectedGenre === "all" ||
+                            cardGenre.includes(selectedGenre);
+
+                        // Match Search
+                        let matchSearch =
+                            !query ||
+                            title.includes(query) ||
+                            author.includes(query) ||
+                            cardGenre.toLowerCase().includes(query);
+
+                        if (
+                            matchType &&
+                            matchStock &&
+                            matchGenre &&
+                            matchSearch
+                        ) {
+                            card.style.display = "flex";
+                            visibleCount++;
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+
+                    // Update count & empty state
+                    resultsCount.innerHTML = `Menampilkan <strong>${visibleCount} koleksi buku</strong> siap pinjam`;
+                    if (visibleCount === 0) {
+                        emptyState.style.display = "block";
+                    } else {
+                        emptyState.style.display = "none";
+                    }
+
+                    updateChips(query, selectedStock, selectedGenre);
+                }
+
+                function updateChips(query, stock, genre) {
+                    chipsContainer.innerHTML = "";
+                    if (activeType !== "all") {
+                        const labelMap = {
+                            digital: "Digital",
+                            physical: "Fisik",
+                            both: "Fisik & Digital",
+                        };
+                        chipsContainer.innerHTML += `<span class="chip">Jenis: ${labelMap[activeType]}</span>`;
+                    }
+                    if (stock !== "all") {
+                        const stockMap = {
+                            available: "Tersedia",
+                            limited: "Stok Terbatas",
+                            out: "Habis",
+                        };
+                        chipsContainer.innerHTML += `<span class="chip">Stok: ${stockMap[stock]}</span>`;
+                    }
+                    if (genre !== "all") {
+                        chipsContainer.innerHTML += `<span class="chip">Genre: ${genre}</span>`;
+                    }
+                    if (query) {
+                        chipsContainer.innerHTML += `<span class="chip">Cari: "${query}"</span>`;
+                    }
+                    if (!chipsContainer.innerHTML) {
+                        chipsContainer.innerHTML = `<span class="chip">Semua Buku Aktif</span>`;
+                    }
+                }
+
+                // Segmented control click
+                segButtons.forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                        segButtons.forEach((b) => b.classList.remove("active"));
+                        btn.classList.add("active");
+                        activeType = btn.getAttribute("data-filter-type");
+                        filterBooks();
+                    });
+                });
+
+                // Search input
+                searchInput.addEventListener("input", filterBooks);
+                clearBtn.addEventListener("click", () => {
+                    searchInput.value = "";
+                    filterBooks();
+                    searchInput.focus();
+                });
+
+                // Select changes
+                stockFilter.addEventListener("change", filterBooks);
+                genreFilter.addEventListener("change", filterBooks);
+
+                // Reset
+                window.resetAllFilters = function () {
+                    searchInput.value = "";
+                    stockFilter.value = "all";
+                    genreFilter.value = "all";
+                    segButtons.forEach((b) => b.classList.remove("active"));
+                    segButtons[0].classList.add("active");
+                    activeType = "all";
+                    filterBooks();
+                };
+
+                resetBtn.addEventListener("click", window.resetAllFilters);
+            });
+        </script>-->
+    </body>
+</html>

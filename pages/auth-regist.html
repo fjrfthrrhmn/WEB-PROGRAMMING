@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Perpustakaan Buku Desa</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/styles/regist.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="register-wrapper">
+
+            <div class="register-card">
+
+                <!-- Tombol kembali ke Login -->
+                <a href="auth-login.html" class="back-button" title="Kembali ke Login">
+                    <span>←</span>
+                    <span>Login</span>
+                </a>
+
+
+                <!-- Header -->
+                <div class="register-header">
+
+                    <div class="book-icon">
+                        📚
+                    </div>
+
+                    <h1 class="register-heading">
+                        Daftar Akun
+                    </h1>
+
+                    <p class="register-description">
+                        Buat akun untuk mengakses perpustakaan.
+                    </p>
+
+                </div>
+
+
+                <!-- Form Register -->
+                <form>
+
+                    <!-- Username -->
+                    <div class="form-group">
+
+                        <label class="form-label" for="username">
+                            Username
+                        </label>
+
+                        <input
+                            class="form-input"
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Masukkan username"
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label class="form-label" for="password">
+                            Password
+                        </label>
+
+                        <input
+                            class="form-input"
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Masukkan password"
+                        >
+
+                    </div>
+
+
+                    <!-- Konfirmasi Password -->
+                    <div class="form-group">
+
+                        <label class="form-label" for="confirm-password">
+                            Konfirmasi Password
+                        </label>
+
+                        <input
+                            class="form-input"
+                            type="password"
+                            id="confirm-password"
+                            name="confirm-password"
+                            placeholder="Masukkan kembali password"
+                        >
+
+                    </div>
+
+
+                    <!-- Checkbox -->
+                    <div class="captcha">
+
+                        <input
+                            type="checkbox"
+                            id="not-robot"
+                            name="not-robot"
+                        >
+
+                        <label for="not-robot">
+                            Saya bukan robot
+                        </label>
+
+                    </div>
+
+
+                    <!-- Tombol Register -->
+                    <button
+                        class="submit-button"
+                        type="submit"
+                    >
+                        Daftar
+                    </button>
+
+                </form>
+
+
+                <!-- Footer -->
+                <p class="form-footer">
+                    © 2026 Perpustakaan Buku Desa.
+                    Semua hak dilindungi.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
+

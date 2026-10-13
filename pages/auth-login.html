@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Perpustakaan Buku Desa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="login-wrapper">
+
+            <div class="login-card">
+
+                <!-- Tombol kembali -->
+                <a href="beranda.html" class="back-button" title="Kembali ke Beranda">
+                    <span>←</span>
+                    <span>Beranda</span>
+                </a>
+
+                <!-- Judul -->
+                <div class="login-header">
+
+                    <div class="book-icon">
+                        📚
+                    </div>
+
+                    <h1 class="login-heading">
+                        Perpustakaan Buku Desa
+                    </h1>
+
+                    <p class="login-description">
+                        Silakan masuk untuk mengakses perpustakaan.
+                    </p>
+
+                </div>
+
+                <!-- Form Login -->
+                <form id="loginForm">
+
+                    <!-- Username -->
+                    <div class="form-group">
+
+                        <label class="form-label" for="username">
+                            Username
+                        </label>
+
+                        <input
+                            class="form-input"
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Masukkan username"
+                        >
+
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label class="form-label" for="password">
+                            Password
+                        </label>
+
+                        <input
+                            class="form-input"
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Masukkan password"
+                        >
+
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="captcha">
+
+                        <input
+                            type="checkbox"
+                            id="not-robot"
+                            name="not-robot"
+                        >
+
+                        <label for="not-robot">
+                            Saya bukan robot
+                        </label>
+
+                    </div>
+
+                    <!-- Tombol Login -->
+                    <button
+                        class="submit-button"
+                        type="submit"
+                        id="loginButton"
+                        disabled
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+                <!-- Daftar -->
+                <div class="register-section">
+
+                    <p>
+                        Belum memiliki akun?
+                    </p>
+
+                    <a href="auth-regist.html" class="register-button">
+                        Daftar Sekarang
+                    </a>
+
+                </div>
+
+                <!-- Footer -->
+                <p class="form-footer">
+                    © 2026 Perpustakaan Buku Desa.
+                    Semua hak dilindungi.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+        const notRobot = document.getElementById("not-robot");
+        const loginButton = document.getElementById("loginButton");
+        const loginForm = document.getElementById("loginForm");
+
+
+        // Mengecek apakah semua data sudah diisi
+        function checkForm() {
+
+            if (
+                username.value.trim() !== "" &&
+                password.value.trim() !== "" &&
+                notRobot.checked
+            ) {
+
+                loginButton.disabled = false;
+
+            } else {
+
+                loginButton.disabled = true;
+
+            }
+        }
+
+
+        username.addEventListener("input", checkForm);
+        password.addEventListener("input", checkForm);
+        notRobot.addEventListener("change", checkForm);
+
+
+        // Ketika tombol Login ditekan
+        loginForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            window.location.href = "beranda.html";
+
+        });
+
+    </script>
+
+</body>
+</html>
+

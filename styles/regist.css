@@ -1,0 +1,347 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+
+    --text: #1e293b;
+    --muted: #64748b;
+
+    --background: #eaf4ff;
+    --surface: #ffffff;
+
+    --border: #cbd5e1;
+
+    --font: "Geist", Arial, sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: var(--font);
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(135deg, #eaf4ff, #ffffff);
+
+    color: var(--text);
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+/* Register Wrapper */
+
+.register-wrapper {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Card */
+
+.register-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 440px;
+
+    padding: 35px;
+
+    background: var(--surface);
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Tombol Back */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    padding: 9px 14px;
+
+    color: var(--primary);
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+.back-button span:first-child {
+    font-size: 22px;
+    line-height: 1;
+}
+
+
+.back-button:hover {
+    background: var(--primary);
+
+    color: white;
+
+    transform: translateX(-3px);
+
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.20);
+}
+
+
+/* Header */
+
+.register-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* Icon Buku */
+
+.book-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+
+/* Judul */
+
+.register-heading {
+    margin-bottom: 10px;
+
+    color: #1e3a8a;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+
+.register-description {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.form-input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    color: var(--text);
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: all 0.25s ease;
+}
+
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+
+.form-input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Checkbox */
+
+.captcha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    padding: 13px 14px;
+
+    background: #f8fbff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 10px;
+
+    color: #475569;
+
+    font-size: 14px;
+}
+
+
+.captcha input {
+    width: 18px;
+    height: 18px;
+
+    accent-color: var(--primary);
+
+    cursor: pointer;
+}
+
+
+.captcha label {
+    cursor: pointer;
+}
+
+
+/* Tombol Register */
+
+.submit-button {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+.submit-button:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* Footer */
+
+.form-footer {
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* Tampilan HP */
+
+@media (max-width: 500px) {
+
+    .register-card {
+        padding: 25px 20px;
+
+        border-radius: 16px;
+    }
+
+
+    .register-heading {
+        font-size: 23px;
+    }
+
+
+    .back-button {
+        margin-bottom: 20px;
+    }
+
+}
