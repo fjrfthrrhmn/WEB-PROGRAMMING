@@ -14,49 +14,66 @@
         </title>
         <!--<link href="/styles/global.css" rel="stylesheet" />-->
         <link href="../styles/detail_produk.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <!-- Topbar -->
-        <div class="topbar">
-            <div class="container">
-                <p>
-                    🚚 Layanan peminjaman buku perpustakaan untuk seluruh warga
-                    desa
-                </p>
-                <div class="utility">
-                    <span>✦ Ruang baca, digital &amp; buku fisik</span>
-                    <span>☎ (022) 123-4567</span>
+    <!-- Topbar -->
+            <div class="bg-[#20344d] text-[#eff6ff] text-[11px]">
+                <div class="mx-auto flex min-h-[38px] w-[calc(100%-48px)] max-w-[1180px] items-center justify-between">
+                    <p class="my-0 flex items-center gap-[6px]">
+                        🚚 Layanan peminjaman buku perpustakaan untuk seluruh warga desa
+                    </p>
+                    <div class="hidden gap-6 md:flex">
+                        <span>✦ Ruang baca, digital &amp; buku fisik</span>
+                        <span>☎ (022) 123-4567</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Header Navigation -->
-        <header class="site-header">
-            <div class="container">
-                <a class="logo" href="beranda.html">
-                    <span class="logo-mark">♧</span>
-                    <span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span>
-                </a>
-                <nav aria-label="Navigasi utama" class="main-nav">
-                    <a href="beranda.html">BERANDA</a>
-                    <a class="active" href="produk.html">KATALOG BUKU</a>
-                    <a href="auth-login.html">LOGIN</a>
-                    <a href="auth-regist.html">REGIST</a>
-                    <a href="form_peminjaman.html">PINJAM BUKU</a>
-                </nav>
-                <div class="header-actions">
-                    <form class="search-box" role="search">
-                        <input
-                            type="search"
-                            aria-label="Cari buku"
-                            placeholder="Cari buku..."
-                        /><button type="button" aria-label="Cari" disabled>
-                            ⌕
-                        </button>
-                    </form>
-                    <a href="#kontak" aria-label="Hubungi kami">♙</a>
+            <!-- Header Navigation (Tailwind CSS) -->
+
+            <header class="sticky top-0 z-40 border-b border-[#e2e8f0] bg-white">
+                <div class="relative mx-auto flex min-h-20 w-full max-w-6xl items-center justify-between gap-5 px-4">
+                    <a class="flex min-w-max items-center gap-2 text-base font-bold tracking-wide no-underline" href="beranda.html">
+                        <span class="grid h-9 w-8 place-items-center bg-[#315f8c] text-base text-white [clip-path:polygon(50%_0,100%_19%,100%_81%,50%_100%,0_81%,0_19%)]">♧</span>
+                        <span>PERPUSTAKAAN<small class="-mt-2 block text-[8px] font-semibold tracking-widest text-[#6b7280]">DESA SUKAMAJU</small></span>
+                    </a>
+
+                    <nav aria-label="Navigasi utama" class="hidden h-full items-center gap-3 overflow-x-auto whitespace-nowrap text-xs font-semibold tracking-tight text-[#4b5563] lg:flex lg:gap-5">
+                        <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="beranda.html">BERANDA</a>
+
+                        <a class="relative flex h-full shrink-0 items-center py-2 text-[#315f8c] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3px] after:rounded-t-[3px] after:bg-[#315f8c] lg:py-0" href="produk.html" aria-current="page">KATALOG BUKU</a>
+
+                        <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="auth-login.html">LOGIN</a>
+
+                        <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="auth-regist.html">REGIST</a>
+
+                        <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="form_peminjaman.html">PINJAM BUKU</a>
+                    </nav>
+
+                    <details class="relative shrink-0 lg:hidden">
+                        <summary aria-label="Buka menu navigasi" class="cursor-pointer list-none rounded-md border border-[#dbe3f0] bg-white px-3 py-2 text-sm font-semibold text-[#315f8c] focus:outline-none focus:ring-2 focus:ring-[#315f8c]">
+                            <span aria-hidden="true">☰</span><span class="ml-2">Menu</span>
+                        </summary>
+
+                        <nav aria-label="Navigasi utama seluler" class="absolute right-0 top-full z-50 mt-2 flex w-52 flex-col border border-[#e2e8f0] bg-white p-2 text-xs font-semibold tracking-tight text-[#4b5563] shadow-lg">
+                            <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="beranda.html">BERANDA</a>
+                            <a class="block bg-[#f1f5f9] px-3 py-3 text-[#315f8c]" href="produk.html" aria-current="page">KATALOG BUKU</a>
+                            <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="auth-login.html">LOGIN</a>
+                            <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="auth-regist.html">REGIST</a>
+                            <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="form_peminjaman.html">PINJAM BUKU</a>
+                        </nav>
+                    </details>
+
+                    <div class="hidden items-center gap-3 lg:flex">
+                        <form class="flex h-8 w-48 items-center rounded-md border border-[#dbe3f0] bg-white px-2" role="search">
+                            <input class="w-full min-w-0 border-0 bg-transparent text-xs text-[#1f2937] outline-none placeholder:text-[#94a3b8]" type="search" aria-label="Cari buku" placeholder="Cari buku..." />
+                            <button class="border-0 bg-transparent text-lg leading-none text-[#6b7280]" type="button" aria-label="Cari" disabled>⌕</button>
+                        </form>
+
+                        <a class="text-[#4b5563] no-underline hover:text-[#315f8c]" href="#kontak" aria-label="Hubungi kami">♙</a>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
         <main class="container">
             <!-- Breadcrumb & Back Action -->
             <div class="detail-nav-bar">
@@ -356,59 +373,79 @@
                 </div>
             </section>
         </main>
-        <!-- Footer Konsisten dari beranda.html -->
-        <footer id="kontak">
-            <div class="container footer-main">
-                <div class="footer-brand">
-                    <a class="logo" href="beranda.html">
-                        <span class="logo-mark">♧</span>
-                        <span>PERPUSTAKAAN<small>DESA SUKAMAJU</small></span>
-                    </a>
-                    <p>
-                        Ruang belajar bersama milik warga. Menumbuhkan
-                        pengetahuan dan budaya membaca bagi generasi masa depan.
-                    </p>
-                    <div class="socials">
-                        <a aria-label="Facebook" href="#kontak">f</a>
-                        <a aria-label="Instagram" href="#kontak">ig</a>
-                        <a aria-label="YouTube" href="#kontak">▶</a>
+        <footer id="kontak" class="bg-[#20344d] text-[#dbeafe]">
+                    <div class="mx-auto grid w-full max-w-7xl grid-cols-[1.3fr_2fr_1.15fr] gap-9 px-6 py-12 pb-8 max-[768px]:grid-cols-1 max-[768px]:gap-7">
+
+                        <div>
+                            <a class="flex min-w-max items-center gap-2.5 text-base font-bold tracking-wide text-white" href="beranda.html">
+                                <span class="grid h-9 w-8 place-items-center bg-[#315f8c] text-base text-white [clip-path:polygon(50%_0,100%_19%,100%_81%,50%_100%,0_81%,0_19%)]">♧</span>
+                                <span>
+                                    PERPUSTAKAAN
+                                    <small class="mt-[-2px] block text-[8px] font-semibold tracking-widest text-[#bfdbfe]">DESA SUKAMAJU</small>
+                                </span>
+                            </a>
+
+                            <p class="my-3.5 max-w-64 text-xs leading-relaxed text-[#bfdbfe]">
+                                Ruang belajar bersama milik warga. Menumbuhkan
+                                pengetahuan dan budaya membaca bagi generasi masa depan.
+                            </p>
+
+                            <div class="flex gap-2.5">
+                                <a class="grid size-7 place-items-center rounded-full border border-[#5471b8] text-xs transition-colors hover:bg-white/15" aria-label="Facebook" href="#kontak">f</a>
+                                <a class="grid size-7 place-items-center rounded-full border border-[#5471b8] text-xs transition-colors hover:bg-white/15" aria-label="Instagram" href="#kontak">ig</a>
+                                <a class="grid size-7 place-items-center rounded-full border border-[#5471b8] text-xs transition-colors hover:bg-white/15" aria-label="YouTube" href="#kontak">▶</a>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-5 max-[768px]:grid-cols-2">
+                            <div>
+                                <h3 class="mb-3 text-xs font-normal tracking-wide text-white">JELAJAHI</h3>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html">Beranda</a>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="produk.html">Katalog Buku</a>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="form_peminjaman.html">Form Pinjam</a>
+                            </div>
+
+                            <div>
+                                <h3 class="mb-3 text-xs font-normal tracking-wide text-white">INFORMASI</h3>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Tentang Kami</a>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Jam Buka</a>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="#kontak">Kontak</a>
+                            </div>
+
+                            <div>
+                                <h3 class="mb-3 text-xs font-normal tracking-wide text-white">ALAMAT</h3>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Balai Desa Sukamaju</a>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Kab. Bandung</a>
+                                <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="tel:+62221234567">(022) 123-4567</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="mb-3 text-xs font-normal tracking-wide text-white">BERITA LITERASI</h3>
+                            <p class="my-2 mb-3.5 text-xs leading-normal text-[#bfdbfe]">
+                                Dapatkan informasi buku baru &amp; agenda bedah buku
+                                mingguan warga.
+                            </p>
+
+                            <form
+                                class="flex overflow-hidden rounded-md border border-[#3d5da8] bg-white/5"
+                                onsubmit="event.preventDefault(); alert('Terima kasih telah mendaftar!');">
+                                <input
+                                    aria-label="Email buletin"
+                                    placeholder="Masukkan email Anda..."
+                                    required
+                                    type="email"
+                                    class="w-full bg-transparent px-3 py-2 text-xs text-white outline-none placeholder:text-[#93c5fd]"
+                                />
+                                <button class="border-0 bg-[#315f8c] px-3.5 text-sm text-white" aria-label="Kirim" type="submit">→</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-links">
-                    <div>
-                        <h3>JELAJAHI</h3>
-                        <a href="beranda.html">Beranda</a>
-                        <a href="produk.html">Katalog Buku</a>
-                        <a href="form_peminjaman.html">Form Pinjam</a>
+
+                    <div class="border-t border-[#2d4563] px-6 py-4 text-center text-xs text-[#93c5fd]">
+                        © 2026 Perpustakaan Desa Sukamaju. Seluruh hak cipta dilindungi.
                     </div>
-                    <div>
-                        <h3>INFORMASI</h3>
-                        <a href="beranda.html#tentang">Tentang Kami</a>
-                        <a href="beranda.html#tentang">Jam Buka</a>
-                        <a href="#kontak">Kontak</a>
-                    </div>
-                    <div>
-                        <h3>ALAMAT</h3>
-                        <a href="beranda.html#tentang">Balai Desa Sukamaju</a>
-                        <a href="beranda.html#tentang">Kab. Bandung</a>
-                        <a href="tel:+62221234567">(022) 123-4567</a>
-                    </div>
-                </div>
-                <div class="footer-news">
-                    <h3>BERITA LITERASI</h3>
-                    <p>
-                        Dapatkan informasi buku baru &amp; agenda bedah buku
-                        mingguan warga.
-                    </p>
-                    <div style="font-size: 11px; color: #93c5fd">
-                        Buka: Senin–Jumat 08.00–16.00
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                © 2026 Perpustakaan Desa Sukamaju. Seluruh hak cipta dilindungi.
-            </div>
-        </footer>
+                </footer>
         <!-- Interactive Script for Detail Actions -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
