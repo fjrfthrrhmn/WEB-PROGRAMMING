@@ -1,411 +1,412 @@
 <!doctype html>
 <html lang="id">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
-      name="description"
-      content="Perpustakaan Desa, ruang baca dan belajar bersama milik warga."
+        name="description"
+        content="Perpustakaan Desa, ruang baca dan belajar bersama milik warga."
     />
     <title>Beranda | Perpustakaan Desa</title>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/beranda.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-  <!-- Topbar -->
-          <div class="bg-[#20344d] text-[#eff6ff] text-[11px]">
-              <div class="mx-auto flex min-h-[38px] w-[calc(100%-48px)] max-w-[1180px] items-center justify-between">
-                  <p class="my-0 flex items-center gap-[6px]">
-                      🚚 Layanan peminjaman buku perpustakaan untuk seluruh warga desa
-                  </p>
-                  <div class="hidden gap-6 md:flex">
-                      <span>✦ Ruang baca, digital &amp; buku fisik</span>
-                      <span>☎ (022) 123-4567</span>
-                  </div>
-              </div>
-          </div>
-          <!-- Header Navigation (Tailwind CSS) -->
+</head>
 
-          <header class="sticky top-0 z-40 border-b border-[#e2e8f0] bg-white">
-              <div class="relative mx-auto flex min-h-20 w-full max-w-6xl items-center justify-between gap-5 px-4">
-                  <a class="flex min-w-max items-center gap-2 text-base font-bold tracking-wide no-underline" href="beranda.html">
-                      <span class="grid h-9 w-8 place-items-center bg-[#315f8c] text-base text-white [clip-path:polygon(50%_0,100%_19%,100%_81%,50%_100%,0_81%,0_19%)]">♧</span>
-                      <span>PERPUSTAKAAN<small class="-mt-2 block text-[8px] font-semibold tracking-widest text-[#6b7280]">DESA SUKAMAJU</small></span>
-                  </a>
-
-                  <nav aria-label="Navigasi utama" class="hidden h-full items-center gap-3 overflow-x-auto whitespace-nowrap text-xs font-semibold tracking-tight text-[#4b5563] lg:flex lg:gap-5">
-                      <a class="relative flex h-full shrink-0 items-center py-2 text-[#315f8c] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3px] after:rounded-t-[3px] after:bg-[#315f8c] lg:py-0" href="beranda.html">BERANDA</a>
-
-                      <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="produk.html" aria-current="page">KATALOG BUKU</a>
-
-                      <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="auth-login.html">LOGIN</a>
-
-                      <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="auth-regist.html">REGIST</a>
-
-                      <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="form_peminjaman.html">PINJAM BUKU</a>
-                  </nav>
-
-                  <details class="relative shrink-0 lg:hidden">
-                      <summary aria-label="Buka menu navigasi" class="cursor-pointer list-none rounded-md border border-[#dbe3f0] bg-white px-3 py-2 text-sm font-semibold text-[#315f8c] focus:outline-none focus:ring-2 focus:ring-[#315f8c]">
-                          <span aria-hidden="true">☰</span><span class="ml-2">Menu</span>
-                      </summary>
-
-                      <nav aria-label="Navigasi utama seluler" class="absolute right-0 top-full z-50 mt-2 flex w-52 flex-col border border-[#e2e8f0] bg-white p-2 text-xs font-semibold tracking-tight text-[#4b5563] shadow-lg">
-                          <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="beranda.html">BERANDA</a>
-                          <a class="block bg-[#f1f5f9] px-3 py-3 text-[#315f8c]" href="produk.html" aria-current="page">KATALOG BUKU</a>
-                          <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="auth-login.html">LOGIN</a>
-                          <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="auth-regist.html">REGIST</a>
-                          <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="form_peminjaman.html">PINJAM BUKU</a>
-                      </nav>
-                  </details>
-
-                  <div class="hidden items-center gap-3 lg:flex">
-                      <form class="flex h-8 w-48 items-center rounded-md border border-[#dbe3f0] bg-white px-2" role="search">
-                          <input class="w-full min-w-0 border-0 bg-transparent text-xs text-[#1f2937] outline-none placeholder:text-[#94a3b8]" type="search" aria-label="Cari buku" placeholder="Cari buku..." />
-                          <button class="border-0 bg-transparent text-lg leading-none text-[#6b7280]" type="button" aria-label="Cari" disabled>⌕</button>
-                      </form>
-
-                      <a class="text-[#4b5563] no-underline hover:text-[#315f8c]" href="#kontak" aria-label="Hubungi kami">♙</a>
-                  </div>
-              </div>
-          </header>
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero-copy">
-            <p class="eyebrow">TEMUKAN. BACA. BERTUMBUH.</p>
-            <h1>Ruang baca untuk <em>setiap mimpi.</em></h1>
-            <p>
-              Perpustakaan Desa adalah ruang baca dan belajar bersama milik
-              warga. Gratis untuk anak-anak hingga lansia.
+<body>
+    <!-- Topbar -->
+    <div class="bg-[#20344d] text-[#eff6ff] text-[11px]">
+        <div class="mx-auto flex min-h-[38px] w-[calc(100%-48px)] max-w-[1180px] items-center justify-between">
+            <p class="my-0 flex items-center gap-[6px]">
+                🚚 Layanan peminjaman buku perpustakaan untuk seluruh warga desa
             </p>
-            <div class="button-row">
-              <a class="button button-primary" aria-disabled="true"
-                >JELAJAHI KATALOG&nbsp; →</a
-              ><a class="button button-outline" href="#tentang">TENTANG KAMI</a>
+            <div class="hidden gap-6 md:flex">
+                <span>✦ Ruang baca, digital &amp; buku fisik</span>
+                <span>☎ (022) 123-4567</span>
             </div>
-            <div class="reader-note">
-              <div class="avatars">
-                <span class="avatar">A</span><span class="avatar">R</span
-                ><span class="avatar">D</span><span class="avatar">S</span>
-              </div>
-              <span><strong>★★★★★</strong>Disukai oleh warga desa</span>
-            </div>
-          </div>
-          <div class="hero-art" aria-label="Ilustrasi komunitas pembaca">
-            <div class="hero-badge">Cerita<br />baru untuk<br />semua</div>
-            <div class="book-stack" aria-hidden="true">
-              <span>CERITA NUSANTARA</span><span>ILMU PENGETAHUAN</span
-              ><span>JEJAK LANGKAH</span><span>MASA DEPAN</span>
-            </div>
-          </div>
         </div>
-      </section>
-      <section class="benefits" aria-label="Keunggulan perpustakaan">
-        <div class="benefit">
-          <span class="benefit-icon">▣</span
-          ><span
-            ><strong>GRATIS UNTUK WARGA</strong
-            ><small>Terbuka setiap hari kerja</small></span
-          >
-        </div>
-        <div class="benefit">
-          <span class="benefit-icon">↺</span
-          ><span
-            ><strong>MUDAH DIPINJAM</strong
-            ><small>Pendaftaran anggota sederhana</small></span
-          >
-        </div>
-        <div class="benefit">
-          <span class="benefit-icon">♢</span
-          ><span
-            ><strong>KOLEKSI TERPILIH</strong
-            ><small>Buku untuk semua usia</small></span
-          >
-        </div>
-        <div class="benefit">
-          <span class="benefit-icon">♡</span
-          ><span
-            ><strong>RUANG YANG NYAMAN</strong
-            ><small>Belajar dan bertemu bersama</small></span
-          >
-        </div>
-      </section>
-      <div class="container content">
-        <section id="kategori">
-          <div class="section-title">
-            <div>
-              <p class="eyebrow">PILIH SESUAI MINATMU</p>
-              <h2>Temukan Bacaan Berikutnya</h2>
-            </div>
-            <a class="view-all" href="katalog.html"
-              >LIHAT SEMUA KATEGORI&nbsp; →</a
-            >
-          </div>
-          <div class="category-grid">
-            <a class="category" href="katalog.html"
-              ><i class="round-icon">▤</i
-              ><span>FIKSI<small>Cerita yang menghibur</small></span></a
-            ><a class="category" href="katalog.html"
-              ><i class="round-icon">◉</i
-              ><span>NON-FIKSI<small>Wawasan baru setiap hari</small></span></a
-            ><a class="category" href="katalog.html"
-              ><i class="round-icon">✦</i
-              ><span>PENDIDIKAN<small>Belajar lebih mudah</small></span></a
-            ><a class="category" href="katalog.html"
-              ><i class="round-icon">♡</i
-              ><span>ANAK-ANAK<small>Teman tumbuh si kecil</small></span></a
-            ><a class="category" href="katalog.html"
-              ><i class="round-icon">☼</i
-              ><span>KETERAMPILAN<small>Kreasi dan inspirasi</small></span></a
-            ><a class="category" href="katalog.html"
-              ><i class="round-icon">⌂</i
-              ><span>SEJARAH<small>Merawat cerita bangsa</small></span></a
-            >
-          </div>
-        </section>
-        <section class="books-section" id="unggulan">
-          <div class="section-title">
-            <div>
-              <p class="eyebrow">BUKU PILIHAN BULAN INI</p>
-              <h2>Favorit Pembaca</h2>
-            </div>
-            <a class="view-all" aria-disabled="true">LIHAT KATALOG&nbsp; →</a>
-          </div>
-          <div class="book-grid">
-            <article class="book-card">
-              <a href="detail_produk.html" class="book-cover">
-                <img
-                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
-                  alt="Sampul Informatika untuk SMA Kelas XII"
-                />
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 border-b border-[#e2e8f0] bg-white">
+        <div class="relative mx-auto flex min-h-20 w-full max-w-6xl items-center justify-between gap-5 px-4">
+            <a class="flex min-w-max items-center gap-2 text-base font-bold tracking-wide no-underline" href="beranda.html">
+                <img src="../assets/library.png" alt="Logo Perpus" class="h-8 w-auto object-contain -mt-3">
+                <span>
+                    PERPUSTAKAAN
+                    <small class="-mt-2 block text-[8px] font-semibold tracking-widest text-[#6b7280]">DESA SUKAMAJU</small>
+                </span>
+            </a>
+
+            <nav aria-label="Navigasi utama" class="hidden h-full items-center gap-3 overflow-x-auto whitespace-nowrap text-xs font-semibold tracking-tight text-[#4b5563] lg:flex lg:gap-5">
+                <a class="relative flex h-full shrink-0 items-center py-2 text-[#315f8c] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3px] after:rounded-t-[3px] after:bg-[#315f8c] lg:py-0" href="beranda.html">BERANDA</a>
+                <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="produk.html" aria-current="page">KATALOG BUKU</a>
+                <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="auth-login.html">LOGIN</a>
+                <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="auth-regist.html">REGIST</a>
+                <a class="flex h-full shrink-0 items-center py-2 text-[#4b5563] transition-colors hover:text-[#315f8c] lg:py-0" href="form_peminjaman.html">PINJAM BUKU</a>
+            </nav>
+
+            <details class="relative shrink-0 lg:hidden">
+                <summary aria-label="Buka menu navigasi" class="cursor-pointer list-none rounded-md border border-[#dbe3f0] bg-white px-3 py-2 text-sm font-semibold text-[#315f8c] focus:outline-none focus:ring-2 focus:ring-[#315f8c]">
+                    <span aria-hidden="true">☰</span>
+                    <span class="ml-2">Menu</span>
+                </summary>
+
+                <nav aria-label="Navigasi utama seluler" class="absolute right-0 top-full z-50 mt-2 flex w-52 flex-col border border-[#e2e8f0] bg-white p-2 text-xs font-semibold tracking-tight text-[#4b5563] shadow-lg">
+                    <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="beranda.html">BERANDA</a>
+                    <a class="block bg-[#f1f5f9] px-3 py-3 text-[#315f8c]" href="produk.html" aria-current="page">KATALOG BUKU</a>
+                    <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="auth-login.html">LOGIN</a>
+                    <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="auth-regist.html">REGIST</a>
+                    <a class="block px-3 py-3 transition-colors hover:bg-[#f1f5f9] hover:text-[#315f8c]" href="form_peminjaman.html">PINJAM BUKU</a>
+                </nav>
+            </details>
+
+            <div class="hidden items-center gap-3 lg:flex">
+              <form class="flex h-8 w-48 items-center rounded-md border border-[#dbe3f0] bg-white px-2" role="search" action="produk.html" method="GET">
+                <input class="w-full min-w-0 border-0 bg-transparent text-xs text-[#1f2937] outline-none placeholder:text-[#94a3b8]" type="search" aria-label="Cari buku" placeholder="Cari buku..." />
+  
+              <a href="produk.html" class="border-0 bg-transparent text-lg leading-none text-[#6b7280] hover:text-[#315f8c] flex items-center justify-center no-underline cursor-pointer" aria-label="Cari">
+                ⌕
               </a>
-              <div class="book-meta">
-                <h3>Informatika Untuk SMA Kelas XII</h3>
-                <p>Pri Ario Damar, Naning Widayati</p>
-                <span class="stars">★★★★★</span>
-                <div class="book-bottom">
-                  <strong>Rp45.000</strong
-                  ><a class="detail-link" aria-disabled="true"
-                    >LIHAT DETAIL →</a
-                  >
-                </div>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <img
-                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
-                  alt="Sampul Informatika untuk SMA Kelas XII"
-                />
-              </div>
-              <div class="book-meta">
-                <h3>Informatika Untuk SMA Kelas XII</h3>
-                <p>Pri Ario Damar, Naning Widayati</p>
-                <span class="stars">★★★★★</span>
-                <div class="book-bottom">
-                  <strong>Rp45.000</strong
-                  ><a class="detail-link" aria-disabled="true"
-                    >LIHAT DETAIL →</a
-                  >
-                </div>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <img
-                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
-                  alt="Sampul Informatika untuk SMA Kelas XII"
-                />
-              </div>
-              <div class="book-meta">
-                <h3>Informatika Untuk SMA Kelas XII</h3>
-                <p>Pri Ario Damar, Naning Widayati</p>
-                <span class="stars">★★★★★</span>
-                <div class="book-bottom">
-                  <strong>Rp45.000</strong
-                  ><a class="detail-link" aria-disabled="true"
-                    >LIHAT DETAIL →</a
-                  >
-                </div>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <img
-                  src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png"
-                  alt="Sampul Informatika untuk SMA Kelas XII"
-                />
-              </div>
-              <div class="book-meta">
-                <h3>Informatika Untuk SMA Kelas XII</h3>
-                <p>Pri Ario Damar, Naning Widayati</p>
-                <span class="stars">★★★★★</span>
-                <div class="book-bottom">
-                  <strong>Rp45.000</strong
-                  ><a class="detail-link" aria-disabled="true"
-                    >LIHAT DETAIL →</a
-                  >
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-        <section class="community-banner">
-          <div class="community-copy">
-            <p class="eyebrow">BAGIAN DARI KOMUNITAS BACA</p>
-            <h2>Dapatkan kabar dan agenda literasi desa.</h2>
-            <p>
-              Daftarkan email untuk mengetahui koleksi baru dan kegiatan
-              berikutnya.
-            </p>
-            <div class="subscribe">
-              <button
-                type="button"
-                aria-label="Form daftar segera hadir"
-                disabled
-              >
-                →
-              </button>
+              </form>
+              <a class="text-[#4b5563] no-underline hover:text-[#315f8c]" href="#kontak" aria-label="Hubungi kami">♙</a>
             </div>
-          </div>
-        </section>
-        <section id="tentang" class="trust-row">
-          <div class="trust">
-            <b>♧</b
-            ><span
-              ><strong>Koleksi untuk semua</strong
-              ><small>Fiksi, pendidikan, dan keterampilan</small></span
-            >
-          </div>
-          <div class="trust">
-            <b>♙</b
-            ><span
-              ><strong>Ruang belajar bersama</strong
-              ><small>Nyaman untuk membaca dan berdiskusi</small></span
-            >
-          </div>
-          <div class="trust">
-            <b>◷</b
-            ><span
-              ><strong>Jam operasional</strong
-              ><small>Senin–Jumat, 08.00–16.00</small></span
-            >
-          </div>
-          <div class="trust">
-            <b>⌖</b
-            ><span
-              ><strong>Lokasi mudah dijangkau</strong
-              ><small>Balai Desa Sukamaju, Kab. Bandung</small></span
-            >
-          </div>
-        </section>
-        <section class="about-panel" aria-label="Tentang Perpustakaan Desa">
-          <img src="/assets/Books to read.jpg" alt="Suasana ruang Perpustakaan Desa" />
-          <div>
-            <p class="eyebrow">TENTANG KAMI</p>
-            <h2>Tentang Perpustakaan Desa</h2>
-            <p>
-              Perpustakaan Desa adalah ruang belajar bersama milik warga. Semua
-              koleksi buku dan kegiatan literasi kami terbuka gratis untuk siapa
-              saja yang tinggal di desa, tanpa biaya keanggotaan.
-            </p>
-            <div class="about-facts">
-              <span
-                ><b>JAM OPERASIONAL</b
-                ><span
-                  >Senin: 08.00–16.00<br />Selasa: 08.00–16.00<br />Rabu:
-                  08.00–16.00<br />Kamis: 08.00–16.00<br />Jumat: 08.00–16.00<br />Sabtu:
-                  09.00–13.00<br />Minggu: Tutup</span
-                ></span
-              ><span
-                ><b>LOKASI</b
-                ><span>Balai Desa Sukamaju,<br />Kab. Bandung</span></span
-              ><span
-                ><b>KONTAK</b
-                ><span class="contact-detail"
-                  ><img src="assets/contact.png" alt="" />(022) 123-4567</span
-                ></span
-              >
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-copy">
+                    <p class="eyebrow">TEMUKAN. BACA. BERTUMBUH.</p>
+                    <h1>Ruang baca untuk <em>setiap mimpi.</em></h1>
+                    <p>
+                        Perpustakaan Desa adalah ruang baca dan belajar bersama milik
+                        warga. Gratis untuk anak-anak hingga lansia.
+                    </p>
+
+                    <div class="button-row">
+                        <a class="button button-primary" href="produk.html">JELAJAHI KATALOG&nbsp; →</a>
+                        <a class="button button-outline" href="#tentang">TENTANG KAMI</a>
+                    </div>
+
+                    <div class="reader-note">
+                        <div class="avatars">
+                            <span class="avatar">A</span>
+                            <span class="avatar">R</span>
+                            <span class="avatar">D</span>
+                            <span class="avatar">S</span>
+                        </div>
+                        <span><strong>★★★★★</strong>Disukai oleh warga desa</span>
+                    </div>
+                </div>
+
+                <div class="hero-art relative overflow-hidden rounded-3xl" aria-label="Ilustrasi perpus">
+                  <img src="../assets/An abstract blurred interior space with bookshelves of a public college university school city library profession education business creativity knowledge literature concepts _ Premium AI-generated….jpg" alt="Ilustrasi buku" class="absolute inset-0 h-full w-full object-cover" />
+                    <div class="hero-badge">Cerita<br />baru untuk<br />semua</div>
+                    <div class="book-stack" aria-hidden="true">
+                        <span>CERITA NUSANTARA</span>
+                        <span>ILMU PENGETAHUAN</span>
+                        <span>JEJAK LANGKAH</span>
+                        <span>MASA DEPAN</span>
+                    </div>
+                </div>
             </div>
-          </div>
         </section>
-      </div>
+
+        <section class="benefits" aria-label="Keunggulan perpustakaan">
+            <div class="benefit">
+                <span class="benefit-icon">▣</span>
+                <span>
+                    <strong>GRATIS UNTUK WARGA</strong>
+                    <small>Terbuka setiap hari kerja</small>
+                </span>
+            </div>
+
+            <div class="benefit">
+                <span class="benefit-icon">↺</span>
+                <span>
+                    <strong>MUDAH DIPINJAM</strong>
+                    <small>Pendaftaran anggota sederhana</small>
+                </span>
+            </div>
+
+            <div class="benefit">
+                <span class="benefit-icon">♢</span>
+                <span>
+                    <strong>KOLEKSI TERPILIH</strong>
+                    <small>Buku untuk semua usia</small>
+                </span>
+            </div>
+
+            <div class="benefit">
+                <span class="benefit-icon">♡</span>
+                <span>
+                    <strong>RUANG YANG NYAMAN</strong>
+                    <small>Belajar dan bertemu bersama</small>
+                </span>
+            </div>
+        </section>
+
+        <div class="container content">
+            <section id="kategori">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">PILIH SESUAI MINATMU</p>
+                        <h2>Temukan Bacaan Lainnya</h2>
+                    </div>
+                    <a class="view-all" href="katalog.html">LIHAT SEMUA KATEGORI&nbsp; →</a>
+                </div>
+
+                <div class="category-grid">
+                    <a class="category" href="katalog.html"><i class="round-icon">▤</i><span>FIKSI<small>Cerita yang menghibur</small></span></a>
+                    <a class="category" href="katalog.html"><i class="round-icon">◉</i><span>NON-FIKSI<small>Wawasan baru setiap hari</small></span></a>
+                    <a class="category" href="katalog.html"><i class="round-icon">✦</i><span>PENDIDIKAN<small>Belajar lebih mudah</small></span></a>
+                    <a class="category" href="katalog.html"><i class="round-icon">♡</i><span>ANAK-ANAK<small>Teman tumbuh si kecil</small></span></a>
+                    <a class="category" href="katalog.html"><i class="round-icon">☼</i><span>KETERAMPILAN<small>Kreasi dan inspirasi</small></span></a>
+                    <a class="category" href="katalog.html"><i class="round-icon">⌂</i><span>SEJARAH<small>Merawat cerita bangsa</small></span></a>
+                </div>
+            </section>
+
+            <section class="books-section" id="unggulan">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">BUKU PILIHAN BULAN INI</p>
+                        <h2>Favorit Pembaca</h2>
+                    </div>
+                    <a class="view-all" aria-disabled="true">LIHAT KATALOG&nbsp; →</a>
+                </div>
+
+                <div class="book-grid">
+                    <article class="book-card">
+                        <a href="detail_produk.html" class="book-cover">
+                            <img src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png" alt="Sampul Informatika untuk SMA Kelas XII" />
+                        </a>
+                        <div class="book-meta">
+                            <h3>Informatika Untuk SMA Kelas XII</h3>
+                            <p>Pri Ario Damar, Naning Widayati</p>
+                            <span class="stars">★★★★★</span>
+                            <div class="book-bottom">
+                                <strong>Rp45.000</strong>
+                                <a class="detail-link" aria-disabled="true">LIHAT DETAIL →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png" alt="Sampul Informatika untuk SMA Kelas XII" />
+                        </div>
+                        <div class="book-meta">
+                            <h3>Informatika Untuk SMA Kelas XII</h3>
+                            <p>Pri Ario Damar, Naning Widayati</p>
+                            <span class="stars">★★★★★</span>
+                            <div class="book-bottom">
+                                <strong>Rp45.000</strong>
+                                <a class="detail-link" aria-disabled="true">LIHAT DETAIL →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png" alt="Sampul Informatika untuk SMA Kelas XII" />
+                        </div>
+                        <div class="book-meta">
+                            <h3>Informatika Untuk SMA Kelas XII</h3>
+                            <p>Pri Ario Damar, Naning Widayati</p>
+                            <span class="stars">★★★★★</span>
+                            <div class="book-bottom">
+                                <strong>Rp45.000</strong>
+                                <a class="detail-link" aria-disabled="true">LIHAT DETAIL →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://static-sc.cloudapp.web.id/content/image/coverteks/coverkurikulum21/Informatika_BS_KLS_XII_Cover.png" alt="Sampul Informatika untuk SMA Kelas XII" />
+                        </div>
+                        <div class="book-meta">
+                            <h3>Informatika Untuk SMA Kelas XII</h3>
+                            <p>Pri Ario Damar, Naning Widayati</p>
+                            <span class="stars">★★★★★</span>
+                            <div class="book-bottom">
+                                <strong>Rp45.000</strong>
+                                <a class="detail-link" aria-disabled="true">LIHAT DETAIL →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="community-banner flex flex-col md:flex-row items-center justify-between rounded-lg overflow-hidden">
+                <div class="community-copy p-8 md:w-1/2 text-white">
+                  <p class="eyebrow text-sm uppercase tracking-wider text-blue-200 mb-2">BAGIAN DARI KOMUNITAS BACA</p>
+                  <h2 class="text-2xl md:text-3xl font-bold mb-4">Dapatkan kabar dan agenda literasi desa.</h2>
+                  <p class="text-gray-200 mb-6">
+                    Daftarkan email untuk mengetahui koleksi baru dan kegiatan berikutnya.
+                  </p>
+                  <div class="subscribe">
+                    <button type="button" aria-label="Form daftar segera hadir" disabled class="text-white hover:underline">
+                      &rarr;
+                    </button>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2 p-8 flex items-center justify-center">
+                  <img src="../assets/Books to read.jpg" alt="Ilustrasi Buku" class="w-full h-64 object-cover rounded-lg" />
+                </div>
+            </section>
+
+            <section id="tentang" class="trust-row">
+                <div class="trust flex items-center gap-3 height-20">
+                    <img src="../assets/stack-of-books.png" alt="Ikon tumpukan buku" class="w-8 h-8" /> 
+                    <span>
+                        <strong>Koleksi untuk semua</strong>
+                        <small>Fiksi, pendidikan, dan keterampilan</small>
+                    </span>
+                </div>
+
+                <div class="trust flex items-center gap-3 height-20">
+                    <img src="../assets/reading.png" alt="Ikon ruang belajar" class="w-8 h-8" />
+                    <span>
+                        <strong>Ruang belajar bersama</strong>
+                        <small>Nyaman untuk membaca dan berdiskusi</small>
+                    </span>
+                </div>
+
+                <div class="trust flex items-center gap-3 height-20">
+                    <img src="../assets/open.png" alt="Ikon jam" class="w-8 h-8" />
+                    <span>
+                        <strong>Jam operasional</strong>
+                        <small>Senin–Jumat, 08.00–16.00</small>
+                    </span>
+                </div>
+
+                <div class="trust">
+                    <b>⌖</b>
+                    <span>
+                        <strong>Lokasi mudah dijangkau</strong>
+                        <small>Balai Desa Sukamaju, Kab. Bandung</small>
+                    </span>
+                </div>
+            </section>
+
+            <section class="about-panel" aria-label="Tentang Perpustakaan Desa">
+                <img src="/assets/Books to read.jpg" alt="Suasana ruang Perpustakaan Desa" class="w-full md:w-1/3 h-80 md:h-[400px] object-cover rounded-xl shadow-md"/>
+                <div>
+                    <p class="eyebrow">TENTANG KAMI</p>
+                    <h2>Tentang Perpustakaan Desa</h2>
+                    <p>
+                        Perpustakaan Desa adalah ruang belajar bersama milik warga. Semua
+                        koleksi buku dan kegiatan literasi kami terbuka gratis untuk siapa
+                        saja yang tinggal di desa, tanpa biaya keanggotaan.
+                    </p>
+
+                    <div class="about-facts">
+                        <span>
+                            <b>JAM OPERASIONAL</b>
+                            <span>
+                                Senin: 08.00–16.00<br />
+                                Selasa: 08.00–16.00<br />
+                                Rabu: 08.00–16.00<br />
+                                Kamis: 08.00–16.00<br />
+                                Jumat: 08.00–16.00<br />
+                                Sabtu: 09.00–13.00<br />
+                                Minggu: Tutup
+                            </span>
+                        </span>
+
+                        <span>
+                            <b>LOKASI</b>
+                            <span>Balai Desa Sukamaju,<br />Kab. Bandung</span>
+                        </span>
+
+                        <span>
+                            <b>KONTAK</b>
+                            <span class="contact-detail">
+                                <img src="../assets/phone.png" alt="Icon telepon" class="w-4 h-4 inline-block mr-1" />
+                                (022) 123-4567
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer id="kontak" class="bg-[#20344d] text-[#dbeafe]">
-                <div class="mx-auto grid w-full max-w-7xl grid-cols-[1.3fr_2fr_1.15fr] gap-9 px-6 py-12 pb-8 max-[768px]:grid-cols-1 max-[768px]:gap-7">
+        <div class="mx-auto grid w-full max-w-7xl grid-cols-[1.3fr_2fr_1.15fr] gap-9 px-6 py-12 pb-8 max-[768px]:grid-cols-1 max-[768px]:gap-7">
+            <div>
+                <a class="flex min-w-max items-center gap-2.5 text-base font-bold tracking-wide text-white" href="beranda.html">
+                    <img src="../assets/library.png" alt="Logo Perpus" class="h-10 w-auto object-contain -mt-3">
+                    <span>
+                        PERPUSTAKAAN
+                        <small class="mt-[-2px] block text-[8px] font-semibold tracking-widest text-[#bfdbfe]">DESA SUKAMAJU</small>
+                    </span>
+                </a>
 
-                    <div>
-                        <a class="flex min-w-max items-center gap-2.5 text-base font-bold tracking-wide text-white" href="beranda.html">
-                            <span class="grid h-9 w-8 place-items-center bg-[#315f8c] text-base text-white [clip-path:polygon(50%_0,100%_19%,100%_81%,50%_100%,0_81%,0_19%)]">♧</span>
-                            <span>
-                                PERPUSTAKAAN
-                                <small class="mt-[-2px] block text-[8px] font-semibold tracking-widest text-[#bfdbfe]">DESA SUKAMAJU</small>
-                            </span>
-                        </a>
+                <p class="my-3.5 max-w-64 text-xs leading-relaxed text-[#bfdbfe]">
+                    Ruang belajar bersama milik warga. Menumbuhkan
+                    pengetahuan dan budaya membaca bagi generasi masa depan.
+                </p>
 
-                        <p class="my-3.5 max-w-64 text-xs leading-relaxed text-[#bfdbfe]">
-                            Ruang belajar bersama milik warga. Menumbuhkan
-                            pengetahuan dan budaya membaca bagi generasi masa depan.
-                        </p>
+                <div class="flex gap-2.5">
+                    <img src="../assets/tiktok.png" alt="Logo Perpus" class="h-6 w-auto object-contain -mt-1">
+                    <img src="../assets/instagram.png" alt="Logo Perpus" class="h-6 w-auto object-contain -mt-1">
+                    <img src="../assets/facebook.png" alt="Logo Perpus" class="h-6 w-auto object-contain -mt-1">
+                </div>
+            </div>
 
-                        <div class="flex gap-2.5">
-                            <a class="grid size-7 place-items-center rounded-full border border-[#5471b8] text-xs transition-colors hover:bg-white/15" aria-label="Facebook" href="#kontak">f</a>
-                            <a class="grid size-7 place-items-center rounded-full border border-[#5471b8] text-xs transition-colors hover:bg-white/15" aria-label="Instagram" href="#kontak">ig</a>
-                            <a class="grid size-7 place-items-center rounded-full border border-[#5471b8] text-xs transition-colors hover:bg-white/15" aria-label="YouTube" href="#kontak">▶</a>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-5 max-[768px]:grid-cols-2">
-                        <div>
-                            <h3 class="mb-3 text-xs font-normal tracking-wide text-white">JELAJAHI</h3>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html">Beranda</a>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="produk.html">Katalog Buku</a>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="form_peminjaman.html">Form Pinjam</a>
-                        </div>
-
-                        <div>
-                            <h3 class="mb-3 text-xs font-normal tracking-wide text-white">INFORMASI</h3>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Tentang Kami</a>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Jam Buka</a>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="#kontak">Kontak</a>
-                        </div>
-
-                        <div>
-                            <h3 class="mb-3 text-xs font-normal tracking-wide text-white">ALAMAT</h3>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Balai Desa Sukamaju</a>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Kab. Bandung</a>
-                            <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="tel:+62221234567">(022) 123-4567</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="mb-3 text-xs font-normal tracking-wide text-white">BERITA LITERASI</h3>
-                        <p class="my-2 mb-3.5 text-xs leading-normal text-[#bfdbfe]">
-                            Dapatkan informasi buku baru &amp; agenda bedah buku
-                            mingguan warga.
-                        </p>
-
-                        <form
-                            class="flex overflow-hidden rounded-md border border-[#3d5da8] bg-white/5"
-                            onsubmit="event.preventDefault(); alert('Terima kasih telah mendaftar!');">
-                            <input
-                                aria-label="Email buletin"
-                                placeholder="Masukkan email Anda..."
-                                required
-                                type="email"
-                                class="w-full bg-transparent px-3 py-2 text-xs text-white outline-none placeholder:text-[#93c5fd]"
-                            />
-                            <button class="border-0 bg-[#315f8c] px-3.5 text-sm text-white" aria-label="Kirim" type="submit">→</button>
-                        </form>
-                    </div>
+            <div class="grid grid-cols-3 gap-5 max-[768px]:grid-cols-2">
+                <div>
+                    <h3 class="mb-3 text-xs font-normal tracking-wide text-white">JELAJAHI</h3>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html">Beranda</a>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="produk.html">Katalog Buku</a>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="form_peminjaman.html">Form Pinjam</a>
                 </div>
 
-                <div class="border-t border-[#2d4563] px-6 py-4 text-center text-xs text-[#93c5fd]">
-                    © 2026 Perpustakaan Desa Sukamaju. Seluruh hak cipta dilindungi.
+                <div>
+                    <h3 class="mb-3 text-xs font-normal tracking-wide text-white">INFORMASI</h3>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Tentang Kami</a>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Jam Buka</a>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="#kontak">Kontak</a>
                 </div>
-            </footer>
-  </body>
+
+                <div>
+                    <h3 class="mb-3 text-xs font-normal tracking-wide text-white">ALAMAT</h3>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Balai Desa Sukamaju</a>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="beranda.html#tentang">Kab. Bandung</a>
+                    <a class="my-2 block text-xs text-[#bfdbfe] transition-colors hover:text-white" href="tel:+62221234567">(022) 123-4567</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="mb-3 text-xs font-normal tracking-wide text-white">BERITA LITERASI</h3>
+                <p class="my-2 mb-3.5 text-xs leading-normal text-[#bfdbfe]">
+                    Dapatkan informasi buku baru &amp; agenda bedah buku
+                    mingguan warga.
+                </p>
+
+                <form
+                    class="flex overflow-hidden rounded-md border border-[#3d5da8] bg-white/5"
+                    onsubmit="event.preventDefault(); alert('Terima kasih telah mendaftar!');"
+                >
+                    <input
+                        aria-label="Email buletin"
+                        placeholder="Masukkan email Anda..."
+                        required
+                        type="email"
+                        class="w-full bg-transparent px-3 py-2 text-xs text-white outline-none placeholder:text-[#93c5fd]"
+                    />
+                    <button class="border-0 bg-[#315f8c] px-3.5 text-sm text-white" aria-label="Kirim" type="submit">→</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="border-t border-[#2d4563] px-6 py-4 text-center text-xs text-[#93c5fd]">
+            © 2026 Perpustakaan Desa Sukamaju. Seluruh hak cipta dilindungi.
+        </div>
+    </footer>
+</body>
 </html>
