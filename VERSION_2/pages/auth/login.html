@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DesaBaca - Login</title>
+    <link rel="icon" type="image/png" href="../../assets/logo.png" />
+
+    <!-- Tailwind CSS v4 browser CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layouts.css" />
+    <link rel="stylesheet" href="../../styles/categories.css" />
+  </head>
+
+  <body class="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <main>
+      <section
+        class="mx-auto flex min-h-screen max-w-6xl items-center justify-center px-6 py-12 md:py-16 lg:py-20"
+        aria-labelledby="login-title"
+      >
+        <form action="#" method="post" class="flex w-full max-w-md flex-col">
+          <!-- Brand -->
+          <a
+            href="../public/beranda.html"
+            class="mb-8 inline-flex w-fit items-center"
+            aria-label="DesaBaca - Kembali ke Beranda"
+          >
+            <img
+              src="../../assets/logo.png"
+              alt="Logo DesaBaca"
+              class="h-16 w-auto object-contain md:h-20"
+            />
+          </a>
+
+          <!-- Heading -->
+          <div class="mb-8">
+            <h1
+              id="login-title"
+              class="text-3xl font-normal tracking-tight text-[var(--foreground)] md:text-4xl"
+            >
+              Masuk ke <span class="font-semibold">DesaBaca.</span>
+            </h1>
+
+            <p
+              class="mt-3 text-sm leading-6 text-[var(--muted-foreground)] md:text-base"
+            >
+              Masuk untuk mengakses layanan perpustakaan desa, menjelajahi
+              koleksi buku, dan mengelola peminjamanmu.
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="space-y-2">
+            <label
+              for="email"
+              class="text-sm font-medium text-[var(--foreground)]"
+            >
+              Alamat email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="nama@email.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="mt-4 space-y-2">
+            <label
+              for="password"
+              class="text-sm font-medium text-[var(--foreground)]"
+            >
+              Kata sandi
+            </label>
+
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Masukkan kata sandi"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <!-- Submit -->
+          <div class="flex flex-col gap-2 mt-6">
+            <button type="submit" class="btn btn-primary">Masuk</button>
+            <a href="../public/beranda.html" class="w-full">
+              <button type="button" class="btn btn-outline w-full">
+                <re-icon icon="chevron-left" class="stroke-2 size-4"></re-icon>
+                Kembali ke Beranda
+              </button>
+            </a>
+          </div>
+
+          <div
+            class="mt-6 rounded-xl border border-[var(--border)] bg-[var(--muted)] p-4"
+          >
+            <p
+              class="text-start text-sm leading-6 text-[var(--muted-foreground)]"
+            >
+              <span class="font-semibold text-[var(--foreground)]">
+                Butuh akses ke DesaBaca?
+              </span>
+              <br />
+              Silakan hubungi petugas atau pengelola perpustakaan desa untuk
+              mendapatkan bantuan akses akun.
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/reicon/cdn/reicon.js"></script>
+  </body>
+</html>

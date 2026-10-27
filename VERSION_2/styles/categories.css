@@ -1,0 +1,198 @@
+
+/* ========================================
+   DesaBaca - Category Book Showcase
+   ======================================== */
+
+.category-card {
+  --book-width: 110px;
+  --book-height: 156px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+
+  padding: 1.5rem 1.25rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in oklch, var(--card) 96%, var(--primary)),
+      var(--card) 65%
+    );
+
+  box-shadow: var(--shadow-xs);
+
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.category-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+
+.category-card__title {
+  color: var(--primary-foreground);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: var(--tracking-normal);
+}
+
+.category-card__description {
+  margin-top: 0.4rem;
+  color: var(--primary-foreground);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.category-card__icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--muted);
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+/* Book arrangement */
+
+.book-display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  height: 208px;
+  margin: 1.1rem -0.25rem 0;
+  isolation: isolate;
+}
+
+/* Each book */
+.book {
+  position: relative;
+  display: block;
+  flex: 0 1 var(--book-width);
+
+  width: var(--book-width);
+  height: var(--book-height);
+  min-width: 0;
+
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 4px 7px 7px 4px;
+
+  background: var(--muted);
+  box-shadow: var(--shadow-md);
+
+  transform-origin: center 85%;
+  transition:
+    transform 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.book img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Left and right books sit behind the center book */
+.book--left {
+  z-index: 1;
+  margin-right: -1.2rem;
+  transform: translateY(9px) rotate(-12deg);
+}
+
+.book--center {
+  z-index: 3;
+  transform: translateY(-9px) scale(1.06);
+  box-shadow: var(--shadow-lg);
+}
+
+.book--right {
+  z-index: 2;
+  margin-left: -1.2rem;
+  transform: translateY(9px) rotate(12deg);
+}
+
+/* Gentle movement on hover */
+.category-card:hover .book--left {
+  transform: translate(-3px, 3px) rotate(-16deg);
+}
+
+.category-card:hover .book--center {
+  transform: translateY(-15px) scale(1.1);
+}
+
+.category-card:hover .book--right {
+  transform: translate(3px, 3px) rotate(16deg);
+}
+
+/* Footer link within the card */
+.category-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+
+  color: var(--foreground);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.category-card__link span {
+  color: var(--primary);
+  transition: transform 180ms ease;
+}
+
+.category-card__link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* Smaller screens */
+@media (max-width: 639px) {
+  .category-card {
+    --book-width: 96px;
+    --book-height: 142px;
+
+    padding: 1.25rem 1rem 1rem;
+  }
+
+  .book-display {
+    height: 190px;
+  }
+}
+
+/* Narrow phones */
+@media (max-width: 359px) {
+  .category-card {
+    --book-width: 82px;
+    --book-height: 124px;
+  }
+
+  .book-display {
+    height: 170px;
+  }
+}

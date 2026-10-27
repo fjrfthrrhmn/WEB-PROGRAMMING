@@ -1,0 +1,1397 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DesaBaca - Beranda</title>
+    <link rel="icon" type="image/png" href="../../assets/logo.png" />
+
+    <!-- Tailwind CSS v4 browser CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layouts.css" />
+    <link rel="stylesheet" href="../../styles/categories.css" />
+    <link rel="stylesheet" href="../../styles/library.css" />
+  </head>
+  <body class="bg-background text-foreground">
+    <!-- Navigation -->
+    <nav
+      class="bg-[var(--background)] px-6 py-4 flex items-center justify-between relative border-b border-border mx-auto w-6xl"
+    >
+      <a href="beranda.html" class="flex gap-2 items-center">
+        <img
+          src="../../assets/logo.png"
+          alt="Logo DesaBaca"
+          class="h-12 w-auto"
+        />
+
+        <h1 class="text-xl">DesaBaca.</h1>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <div
+        class="hidden md:flex items-center bg-[var(--muted)] border border-border rounded-full px-1 py-1 gap-2"
+      >
+        <a
+          href="beranda.html"
+          class="hidden sm:block px-4 py-1.5 rounded-full text-sm transition-colors bg-[var(--card)] border border-border font-medium text-foreground hover:text-[var(--muted-foreground)]"
+          >Beranda</a
+        >
+        <a
+          href="#koleksi"
+          class="hidden sm:block px-4 py-1.5 rounded-full text-sm transition-colors text-[var(--muted-foreground)] hover:text-foreground"
+          >Koleksi</a
+        >
+        <a
+          href="#layanan"
+          class="hidden sm:block px-4 py-1.5 rounded-full text-sm transition-colors text-[var(--muted-foreground)] hover:text-foreground"
+          >Layanan</a
+        >
+        <a
+          href="#tentang"
+          class="hidden sm:block px-4 py-1.5 rounded-full text-sm transition-colors text-[var(--muted-foreground)] hover:text-foreground"
+          >Tentang</a
+        >
+      </div>
+
+      <!-- Desktop CTA Button -->
+      <a
+        href="#koleksi"
+        class="hidden md:flex items-center gap-2.5 bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 text-sm font-medium pl-5 pr-2 py-2 rounded-full cursor-pointer btn btn-primary"
+      >
+        Jelajahi Koleksi
+        <span
+          class="w-7 h-7 rounded-full text-[var(--foreground)] bg-[var(--primary-foreground)] flex items-center justify-center"
+        >
+          <re-icon icon="angle-right" class="stroke-2 size-6"></re-icon>
+        </span>
+      </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="space-y-20 my-30">
+      <section class="mx-auto max-w-6xl px-6">
+        <div class="">
+          <h1
+            class="text-3xl md:text-4xl lg:text-5xl font-serif font-normal tracking-tight leading-tight"
+          >
+            Lanjutkan lembaran
+            <span
+              class="font-semibold bg-[var(--primary)]/15 text-[var(--primary)] px-4 rounded-tr-2xl rounded-bl-2xl"
+            >
+              Ceritamu...
+            </span>
+          </h1>
+          <p
+            class="mt-4 md:mt-6 text-base md:text-lg text-[var(--muted-foreground)] max-w-2xl"
+          >
+            Jangan biarkan alur petualangan terputus. Temukan kembali bab
+            terakhir yang kamu baca, perpanjang waktu pinjam secara mandiri,
+            atau selami ribuan koleksi manuskrip fisik dan digital.
+          </p>
+          <a href="../auth/login.html">
+            <button class="btn btn-primary mt-8">
+              Mulai Membaca
+              <re-icon icon="angle-right" class="size-6 stroke-2"></re-icon>
+            </button>
+          </a>
+        </div>
+      </section>
+
+      <!-- List Categories -->
+      <section id="kategori" class="mx-auto max-w-7xl px-6">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10"
+          >
+            <div class="max-w-xl">
+              <h2
+                class="text-3xl md:text-4xl font-normal font-serif tracking-tight text-[var(--foreground)]"
+              >
+                Temukan bacaan favoritmu.
+              </h2>
+            </div>
+
+            <p
+              class="max-w-lg mt-3 text-[var(--muted-foreground)] leading-relaxed"
+            >
+              Dari cerita yang menginspirasi hingga ilmu pengetahuan, temukan
+              buku yang sesuai dengan minatmu.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <!-- Category 1 -->
+            <article
+              class="category-card group"
+              style="
+                background: linear-gradient(
+                  to top,
+                  #171326 0%,
+                  #30204d 55%,
+                  #49316b 100%
+                );
+              "
+            >
+              <div class="book-display" aria-label="Pilihan buku fiksi">
+                <a
+                  href="#koleksi"
+                  class="book book--left"
+                  aria-label="Lihat buku fiksi pertama"
+                >
+                  <img
+                    src="../../assets/books/1-book-fantasy.jpg"
+                    alt="Sampul buku fiksi pertama"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="#koleksi"
+                  class="book book--center"
+                  aria-label="Lihat buku fiksi kedua"
+                >
+                  <img
+                    src="../../assets/books/2-book-fantasy.jpg"
+                    alt="Sampul buku fiksi kedua"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="#koleksi"
+                  class="book book--right"
+                  aria-label="Lihat buku fiksi ketiga"
+                >
+                  <img
+                    src="../../assets/books/3-book-fantasy.jpg"
+                    alt="Sampul buku fiksi ketiga"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="mt-10 category-card__header">
+                <div>
+                  <h3 class="category-card__title">Fiksi & Novel</h3>
+                  <p class="category-card__description">
+                    Cerita, imajinasi, dan petualangan baru.
+                  </p>
+                </div>
+
+                <span class="category-card__icon" aria-hidden="true">✦</span>
+              </div>
+            </article>
+
+            <!-- Category 2 -->
+            <article
+              class="category-card group"
+              style="
+                background: linear-gradient(
+                  to top,
+                  #142522 0%,
+                  #20483c 55%,
+                  #326653 100%
+                );
+              "
+            >
+              <div class="book-display" aria-label="Pilihan buku pendidikan">
+                <a
+                  href="#koleksi"
+                  class="book book--left"
+                  aria-label="Lihat buku pendidikan pertama"
+                >
+                  <img
+                    src="../../assets/books/13-book-knowledge.jpg"
+                    alt="Sampul buku pendidikan pertama"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="#koleksi"
+                  class="book book--center"
+                  aria-label="Lihat buku pendidikan kedua"
+                >
+                  <img
+                    src="../../assets/books/14-book-knowledge.jpg"
+                    alt="Sampul buku pendidikan kedua"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="#koleksi"
+                  class="book book--right"
+                  aria-label="Lihat buku pendidikan ketiga"
+                >
+                  <img
+                    src="../../assets/books/15-book-knowledge.jpg"
+                    alt="Sampul buku pendidikan ketiga"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="mt-10 category-card__header">
+                <div>
+                  <h3 class="category-card__title">Pendidikan</h3>
+                  <p class="category-card__description">
+                    Perluas wawasan dan pelajari hal baru.
+                  </p>
+                </div>
+
+                <span class="category-card__icon" aria-hidden="true">✧</span>
+              </div>
+            </article>
+
+            <!-- Category 3 -->
+            <article
+              class="category-card group"
+              style="
+                background: linear-gradient(
+                  to top,
+                  #291b17 0%,
+                  #523025 55%,
+                  #754837 100%
+                );
+              "
+            >
+              <div
+                class="book-display"
+                aria-label="Pilihan buku sejarah dan budaya"
+              >
+                <a
+                  href="#koleksi"
+                  class="book book--left"
+                  aria-label="Lihat buku sejarah pertama"
+                >
+                  <img
+                    src="../../assets/books/7-book-history.jpg"
+                    alt="Sampul buku sejarah pertama"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="#koleksi"
+                  class="book book--center"
+                  aria-label="Lihat buku sejarah kedua"
+                >
+                  <img
+                    src="../../assets/books/8-book-history.jpg"
+                    alt="Sampul buku sejarah kedua"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="#koleksi"
+                  class="book book--right"
+                  aria-label="Lihat buku sejarah ketiga"
+                >
+                  <img
+                    src="../../assets/books/9-book-history.jpg"
+                    alt="Sampul buku sejarah ketiga"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div class="mt-10 category-card__header">
+                <div>
+                  <h3 class="category-card__title">Sejarah & Budaya</h3>
+                  <p class="category-card__description">
+                    Kenali sejarah, tradisi, dan kekayaan budaya.
+                  </p>
+                </div>
+
+                <span class="category-card__icon" aria-hidden="true">✺</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Daftar Buku -->
+      <section id="koleksi" class="mx-auto max-w-7xl px-6">
+        <div class="mb-8 max-w-2xl">
+          <h2
+            class="text-3xl md:text-4xl font-normal font-serif tracking-tight text-[var(--foreground)]"
+          >
+            Daftar Buku
+          </h2>
+          <p class="mt-3 leading-relaxed text-[var(--muted-foreground)]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Temukan
+            bacaan menarik untuk menemani waktu luangmu.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <!-- Book 1: Fantasy -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/1-book-fantasy.jpg"
+                alt="Sampul buku fantasi 1"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #49316b"
+                  >Fantasy</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.8</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Lorem Ipsum Dolor Sit Amet
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-1"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 1"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 2: Fantasy -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/2-book-fantasy.jpg"
+                alt="Sampul buku fantasi 2"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #49316b"
+                  >Fantasy</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.6</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Consectetur Adipiscing Elit
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-2"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 2"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 3: Fantasy -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/3-book-fantasy.jpg"
+                alt="Sampul buku fantasi 3"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #49316b"
+                  >Fantasy</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.9</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Sed Do Eiusmod Tempor
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-3"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 3"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 4: Fantasy -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/4-book-fantasy.jpg"
+                alt="Sampul buku fantasi 4"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #49316b"
+                  >Fantasy</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.7</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Incididunt Ut Labore
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-4"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 4"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 5: Fantasy -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/5-book-fantasy.jpg"
+                alt="Sampul buku fantasi 5"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #49316b"
+                  >Fantasy</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.5</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Magna Aliqua Ut Enim
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-5"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 5"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 6: History -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/6-book-history.jpg"
+                alt="Sampul buku sejarah 6"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #754837"
+                  >History</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.8</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Duis Aute Irure Dolor
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-6"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 6"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 7: History -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/7-book-history.jpg"
+                alt="Sampul buku sejarah 7"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #754837"
+                  >History</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.6</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Excepteur Sint Occaecat
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-7"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 7"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 8: History -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/8-book-history.jpg"
+                alt="Sampul buku sejarah 8"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #754837"
+                  >History</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.9</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Cupidatat Non Proident
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-8"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 8"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 9: History -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/9-book-history.jpg"
+                alt="Sampul buku sejarah 9"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #754837"
+                  >History</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.7</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Sunt In Culpa Qui
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-9"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 9"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 10: History -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/10-book-history.jpg"
+                alt="Sampul buku sejarah 10"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #754837"
+                  >History</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.5</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Temporibus Autem Quibusdam
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-10"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 10"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 12: Knowledge -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/12-book-knowledge.jpg"
+                alt="Sampul buku pengetahuan 12"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #326653"
+                  >Knowledge</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.7</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Lorem Ipsum Consectetur
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-12"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 12"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 13: Knowledge -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/13-book-knowledge.jpg"
+                alt="Sampul buku pengetahuan 13"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #326653"
+                  >Knowledge</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.9</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Dolor Sit Amet Adipiscing
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-13"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 13"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 14: Knowledge -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/14-book-knowledge.jpg"
+                alt="Sampul buku pengetahuan 14"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #326653"
+                  >Knowledge</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.6</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Eiusmod Tempor Incididunt
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-14"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 14"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 15: Knowledge -->
+          <article
+            class="flex flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
+          >
+            <div
+              class="w-28 shrink-0 overflow-hidden rounded-xl bg-[var(--muted)] sm:w-36"
+            >
+              <img
+                src="../../assets/books/15-book-knowledge.jpg"
+                alt="Sampul buku pengetahuan 15"
+                loading="lazy"
+                class="h-full min-h-40 w-full object-cover sm:min-h-48"
+              />
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-white"
+                  style="background: #326653"
+                  >Knowledge</span
+                >
+                <span class="text-xs text-[var(--muted-foreground)]"
+                  ><span class="text-amber-500">★★★★★</span> 4.8</span
+                >
+              </div>
+              <h3
+                class="mt-3 text-base font-semibold tracking-tight text-[var(--foreground)] sm:text-lg"
+              >
+                Magna Aliqua Ut Enim Ad Minim
+              </h3>
+              <p
+                class="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="mt-2 text-xs text-[var(--muted-foreground)]">
+                — Penulis
+              </p>
+              <div class="mt-auto flex items-center justify-between gap-2 pt-4">
+                <a
+                  href="#detail-buku-15"
+                  class="btn btn-primary inline-flex items-center gap-1.5 text-sm"
+                  >Lihat Sekarang
+                  <re-icon icon="angle-right" class="size-5 stroke-2"></re-icon
+                ></a>
+                <button
+                  type="button"
+                  aria-label="Bagikan buku 15"
+                  title="Bagikan buku"
+                  class="flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-[var(--background)] text-[var(--foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                >
+                  <re-icon icon="share" class="size-4 stroke-2"></re-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- information -->
+      <section class="mx-auto max-w-6xl px-6" id="lokasi">
+        <div class="library-container">
+          <div class="flex flex-col gap-4 mb-10">
+            <div class="max-w-xl">
+              <h2
+                class="text-3xl md:text-4xl font-normal font-serif tracking-tight text-[var(--foreground)]"
+              >
+                Temukan Perpustakaan Kami
+              </h2>
+            </div>
+
+            <p
+              class="max-w-lg mt-3 text-[var(--muted-foreground)] leading-relaxed"
+            >
+              Kunjungi perpustakaan untuk membaca, belajar, dan menemukan
+              berbagai sumber pengetahuan.
+            </p>
+          </div>
+
+          <div class="library-grid">
+            <!-- Lokasi -->
+            <article class="library-card library-location">
+              <div class="library-card-icon" aria-hidden="true">
+                <re-icon icon="map-point" class="size-6 stroke-2"></re-icon>
+              </div>
+
+              <div class="library-card-content">
+                <h3>Lokasi Perpustakaan</h3>
+                <p>
+                  Gedung Perpustakaan, Kampus Utama. Silakan sesuaikan dengan
+                  alamat perpustakaan.
+                </p>
+
+                <a
+                  class="library-link"
+                  href="https://www.google.com/maps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Lihat Google Maps
+                  <re-icon
+                    icon="arrow-right-up"
+                    class="size-4 stroke-2"
+                  ></re-icon>
+                </a>
+              </div>
+            </article>
+
+            <!-- Jam Operasional -->
+            <article class="library-card">
+              <div class="library-card-icon" aria-hidden="true">
+                <re-icon icon="clock-square" class="size-6 stroke-2"></re-icon>
+              </div>
+
+              <div class="library-card-content">
+                <h3>Jam Operasional</h3>
+                <ul class="library-info-list">
+                  <li><span>Senin–Jumat</span><strong>08.00–16.00</strong></li>
+                  <li><span>Sabtu</span><strong>08.00–12.00</strong></li>
+                  <li><span>Minggu</span><strong>Tutup</strong></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="library-card">
+              <div class="library-card-icon" aria-hidden="true">
+                <re-icon icon="information" class="size-6 stroke-2"></re-icon>
+              </div>
+
+              <div class="library-card-content">
+                <h3>Informasi Lanjutan</h3>
+                <p>
+                  Ketahui prosedur keanggotaan, peminjaman buku, pengembalian,
+                  dan tata tertib perpustakaan.
+                </p>
+
+                <a class="library-link" href="/informasi-perpustakaan">
+                  Pelajari selengkapnya
+                  <re-icon
+                    icon="arrow-right-up"
+                    class="size-4 stroke-2"
+                  ></re-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="px-6 mx-auto max-w-6xl pt-8 w-full border-t border-border bg-transparent text-[var(--muted-foreground)]"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-border pb-6"
+      >
+        <div class="md:max-w-96">
+          <img
+            src="../../assets/logo.png"
+            alt="Logo DesaBaca"
+            class="h-12 w-auto"
+          />
+          <p class="mt-6 text-sm">
+            DesaBaca adalah platform perpustakaan desa berbasis web yang
+            membantu warga mengakses informasi koleksi, buku digital, serta
+            mengajukan peminjaman buku fisik dengan pengelolaan yang lebih
+            terpusat.
+          </p>
+        </div>
+
+        <div
+          class="flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-start gap-x-8 gap-y-10 lg:gap-x-10"
+        >
+          <div class="min-w-0">
+            <h2 class="font-semibold mb-5 text-[var(--foreground)]">
+              Navigasi
+            </h2>
+
+            <ul class="text-sm space-y-3">
+              <li>
+                <a
+                  href="beranda.html"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Beranda
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#koleksi"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Koleksi
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#layanan"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Layanan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#tentang"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Tentang
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="min-w-0">
+            <h2 class="font-semibold mb-5 text-[var(--foreground)]">
+              Informasi
+            </h2>
+
+            <ul class="text-sm space-y-3">
+              <li>
+                <a
+                  href="privacy-policy.html"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Kebijakan Privasi
+                </a>
+              </li>
+              <li>
+                <a
+                  href="terms-of-service.html"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Syarat dan Ketentuan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="help.html"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Bantuan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-[var(--foreground)] transition-colors"
+                >
+                  Hubungi Kami
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="min-w-0 col-span-2">
+            <h2 class="font-semibold mb-5 text-[var(--foreground)]">
+              Temukan Bacaan Baru
+            </h2>
+
+            <div class="text-sm space-y-2">
+              <p>
+                Jelajahi koleksi buku terbaru dan dapatkan informasi seputar
+                layanan perpustakaan DesaBaca.
+              </p>
+
+              <form class="pt-4" action="#" method="get">
+                <label for="newsletter-email" class="sr-only">
+                  Alamat email
+                </label>
+
+                <div
+                  class="flex flex-col sm:flex-row xl:flex-col 2xl:flex-row gap-2"
+                >
+                  <input
+                    id="newsletter-email"
+                    name="email"
+                    type="email"
+                    placeholder="Masukkan email"
+                    autocomplete="email"
+                    class="min-w-0 w-full h-10 px-3 rounded-[var(--radius)] border border-[var(--input)] bg-[var(--card)] text-[var(--card-foreground)] placeholder:text-[var(--muted-foreground)] outline-none focus:ring-2 focus:ring-[var(--ring)] focus:border-[var(--ring)]"
+                  />
+
+                  <button type="submit" class="btn btn-primary">
+                    Daftar
+                    <re-icon icon="send2" class="size-4 stroke-2"></re-icon>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="pt-4 text-start text-xs md:text-sm pb-5">
+        &copy; DesaBaca. Semua hak dilindungi.
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/reicon/cdn/reicon.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+﻿/* Layout styles for shared components (navbar, footer) */
+
+nav {
+  backdrop-filter: saturate(180%) blur(8px);
+}
+
+footer {
+  background-color: transparent;
+}
+
