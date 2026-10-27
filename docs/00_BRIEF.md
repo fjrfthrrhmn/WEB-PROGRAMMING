@@ -3,7 +3,7 @@
 > **Nama File:** `00_BRIEF.md`  
 > **Tujuan:** Menjelaskan brief, latar belakang masalah, kebutuhan proyek, dan output yang diharapkan.  
 > **Status:** SOURCE / REFERENCE  
-> **Versi:** 1.0.0
+> **Versi:** 1.1.0
 
 # Project Output
 
@@ -51,8 +51,14 @@ Selain permasalahan tersebut, Desa XYZ memiliki berbagai potensi yang dapat dike
 - Makanan dan minuman
 - Jasa
 - Toko kelontong
-- Pendidikan
+- **Pendidikan dan literasi** (perpustakaan desa)
 - Wisata
 - Potensi usaha lainnya
 
-Oleh karena itu, diperlukan sebuah solusi berbasis teknologi yang dapat membantu masyarakat Desa XYZ dalam mengatasi permasalahan tersebut sekaligus memanfaatkan potensi lokal yang tersedia.
+Berdasarkan potensi pendidikan dan literasi, terdapat permasalahan akses bahan bacaan: pengelolaan perpustakaan desa masih manual, informasi koleksi belum terpusat, warga kesulitan mengetahui ketersediaan buku, akses buku digital belum terintegrasi, serta belum ada wadah pengajuan peminjaman buku fisik yang terpusat. 
+
+Oleh karena itu, diperlukan sebuah solusi berbasis teknologi yang dapat membantu masyarakat Desa XYZ dalam mengatasi permasalahan tersebut sekaligus memanfaatkan potensi lokal yang tersedia. Untuk konteks literasi, **DesaBaca** dikembangkan sebagai platform perpustakaan desa berbasis web yang berperan sebagai **jembatan/wadah transaksi** antara warga dengan pengelola Balai/Perpustakaan Desa. 
+
+**Konsep:** 
+- **Buku Digital** — warga dapat membaca secara online atau mengunduh apabila file tersedia. 
+- **Buku Fisik** — warga mengajukan permohonan peminjaman melalui website (wadah transaksi/pengajuan). Pengambilan, verifikasi, dan serah-terima dilakukan langsung di Balai/Perpustakaan Desa oleh pengelola.
