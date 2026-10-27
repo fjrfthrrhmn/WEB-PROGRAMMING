@@ -22,6 +22,18 @@
     <link rel="stylesheet" href="../../styles/layouts.css" />
     <link rel="stylesheet" href="../../styles/categories.css" />
     <link rel="stylesheet" href="../../styles/library.css" />
+
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+    </style>
   </head>
   <body class="bg-background text-foreground">
     <!-- Navigation -->
@@ -80,18 +92,21 @@
 
     <!-- Main Content -->
     <main class="space-y-20 my-30">
-      <section class="mx-auto max-w-6xl px-6">
-        <div class="">
+      <section
+        class="mx-auto max-w-6xl px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12"
+      >
+        <div class="w-full md:flex-2">
           <h1
             class="text-3xl md:text-4xl lg:text-5xl font-serif font-normal tracking-tight leading-tight"
           >
             Lanjutkan lembaran
             <span
-              class="font-semibold bg-[var(--primary)]/15 text-[var(--primary)] px-4 rounded-tr-2xl rounded-bl-2xl"
+              class="inline-block font-semibold bg-[var(--primary)]/15 text-[var(--primary)] px-4 rounded-tr-2xl rounded-bl-2xl"
             >
               Ceritamu...
             </span>
           </h1>
+
           <p
             class="mt-4 md:mt-6 text-base md:text-lg text-[var(--muted-foreground)] max-w-2xl"
           >
@@ -99,12 +114,34 @@
             terakhir yang kamu baca, perpanjang waktu pinjam secara mandiri,
             atau selami ribuan koleksi manuskrip fisik dan digital.
           </p>
-          <a href="../auth/login.html">
-            <button class="btn btn-primary mt-8">
-              Mulai Membaca
-              <re-icon icon="angle-right" class="size-6 stroke-2"></re-icon>
-            </button>
+
+          <a
+            href="../auth/login.html"
+            class="btn btn-primary mt-8 inline-flex items-center gap-2"
+          >
+            Mulai Membaca
+            <re-icon icon="angle-right" class="size-6 stroke-2"></re-icon>
           </a>
+        </div>
+
+        <div
+          class="relative isolate w-full md:flex-1 flex items-center justify-center min-w-0"
+        >
+          <div
+            aria-hidden="true"
+            class="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-[var(--primary)]/10 blur-2xl animate-pulse"
+          ></div>
+
+          <div
+            aria-hidden="true"
+            class="absolute w-56 h-56 sm:w-72 sm:h-72 lg:w-88 lg:h-88 rounded-full border border-[var(--primary)]/20"
+          ></div>
+
+          <img
+            src="../../assets/hero.png"
+            alt="Ilustrasi buku untuk DesaBaca"
+            class="relative z-10 w-full max-w-md h-72 sm:h-80 md:h-96 object-contain animate-[float_5s_ease-in-out_infinite]"
+          />
         </div>
       </section>
 
@@ -321,7 +358,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- Daftar Buku -->
       <section id="koleksi" class="mx-auto max-w-7xl px-6">
