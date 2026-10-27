@@ -91,10 +91,10 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="mt-16">
+    <main class="mt-10 sm:mt-16">
       <!-- Book Detail -->
-      <section class="mx-auto max-w-6xl">
-        <div class="book-detail-grid">
+      <section class="mx-auto max-w-6xl px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] items-start gap-8 md:gap-12 lg:gap-[clamp(2rem,5vw,5rem)]">
           <!-- Book Cover -->
           <div class="book-detail-cover">
             <img
@@ -200,7 +200,7 @@
       <!-- Other Books -->
       <section
         id="buku-lainnya"
-        class="mx-auto max-w-6xl my-20"
+        class="mx-auto max-w-6xl my-20 px-6"
       >
         <div
           class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
@@ -231,7 +231,6 @@
           </a>
         </div>
 
-        <section id="koleksi" class="mx-auto max-w-7xl">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <article
             class="flex flex-col sm:flex-row items-stretch gap-4 rounded-2xl border border-border bg-[var(--card)] p-3 sm:p-4"
@@ -461,7 +460,6 @@
             </div>
           </article>
         </div>
-      </section>
         </div>
       </section>
     </main>

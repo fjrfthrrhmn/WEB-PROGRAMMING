@@ -3,17 +3,6 @@
    BOOK DETAIL
 ======================================== */
 
-.detail-nav {
-  width: 100%;
-}
-
-.book-detail-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  align-items: start;
-  gap: clamp(2rem, 5vw, 5rem);
-}
-
 .book-detail-cover {
   position: relative;
   overflow: hidden;
