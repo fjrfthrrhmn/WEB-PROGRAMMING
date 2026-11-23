@@ -139,49 +139,7 @@
     </main>
 
 
-    <script>
-
-        const username = document.getElementById("username");
-        const password = document.getElementById("password");
-        const notRobot = document.getElementById("not-robot");
-        const loginButton = document.getElementById("loginButton");
-        const loginForm = document.getElementById("loginForm");
-
-
-        // Mengecek apakah semua data sudah diisi
-        function checkForm() {
-
-            if (
-                username.value.trim() !== "" &&
-                password.value.trim() !== "" &&
-                notRobot.checked
-            ) {
-
-                loginButton.disabled = false;
-
-            } else {
-
-                loginButton.disabled = true;
-
-            }
-        }
-
-
-        username.addEventListener("input", checkForm);
-        password.addEventListener("input", checkForm);
-        notRobot.addEventListener("change", checkForm);
-
-
-        // Ketika tombol Login ditekan
-        loginForm.addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            window.location.href = "beranda.html";
-
-        });
-
-    </script>
+    <script src="/js/login.js"></script>
 
 </body>
 </html>
